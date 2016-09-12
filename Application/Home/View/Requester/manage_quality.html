@@ -1,0 +1,120 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/dashboard.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <include file="Includes/nav"/>
+    <div class="container-fluid container">
+      <div class="row bjbody">
+        <div class="col-sm-3 col-md-3 sidebar">
+          <section>
+            <h4>{$Think.lang.New Task}</h4>
+          </section>
+          <hr>
+          <h5>1. {$Think.lang.Design Task}</h5>
+          <ul class="nav nav-sidebar">
+            <!--li><a href="#">{$Think.lang.Choose Template}</a></li-->
+            <li><a id="build_task" href="{$Think.config.WEB_URL}/Requester/build_job">{$Think.lang.Build Task}</a></li>
+            <li><a id="data" href="{$Think.config.WEB_URL}/Requester/upload_data">{$Think.lang.Data}</a></li>
+            <li><a id="preview" href="{$Think.config.WEB_URL}/Requester/preview">{$Think.lang.Preview}</a></li>
+          </ul>
+          <h5>2. {$Think.lang.Manage Quality}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a id="qualification_test" href="{$Think.config.WEB_URL}/Requester/qualificationtest">{$Think.lang.Qualification Test}</a></li>
+            <!--li><a href="#">{$Think.lang.Worker Requirement}</a></li-->
+            <li class="active"><a id="task_setting" href="{$Think.config.WEB_URL}/Requester/manage_quality">{$Think.lang.Task Settings}</a></li>
+          </ul>
+          <h5>3. {$Think.lang.Get Results}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a id="publish" href="{$Think.config.WEB_URL}/Requester/launch">{$Think.lang.Publish}</a></li>
+            <li><a id="monitor" href="{$Think.config.WEB_URL}/Requester/monitor">{$Think.lang.Monitor}</a></li>
+            <li><a id="results" href="{$Think.config.WEB_URL}/Requester/get_results">{$Think.lang.Results}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-md-9 main">
+          <div class="row page-header">
+            <h1>{$title}</h1>
+          </div>
+          <div class="col-lg-12 setting">
+            <div class="col-lg-6">
+              <h4>{$Think.lang.Judgement Details}</h4>
+              <div>
+                <label>{$Think.lang.Set the number of workers who will answer a given question}</label>
+                <div>
+                  <input type="number" id="judgements_per_unit" class="input_b" value="{$judgements_per_unit}"/>
+                  <span>{$Think.lang.Judgements per unit}</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h4>{$Think.lang.Units Display Details}</h4>
+              <div>
+                <label>{$Think.lang.Set the number of units which are displayed on each page}</label>
+                <div>
+                  <input type="number" id="units_per_page" class="input_b" value="{$units_per_page}"/>
+                  <span>{$Think.lang.Units per Page}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 setting">
+            <div class="col-lg-6">
+              <h4>{$Think.lang.Payment Details}</h4>
+              <div>
+                <label>{$Think.lang.Set the payment amount for every unit}</label>
+                <div>
+                  <input type="number" id="payment" class="input_b" value="{$price}"/>
+                  <span>{$Think.lang.RMB per unit}</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h4>{$Think.lang.Test Mode}</h4>
+              <div>
+                <label>{$Think.lang.Set the test mode}</label>
+                <div>
+                  {$Think.lang.Vote Correct Answer}:
+                  <input type="checkbox" name="test_mode" id="test_mode" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 setting">
+            <div class="col-lg-6">
+              <h4>{$Think.lang.Geo Mode}</h4>
+              <div>
+                <label>{$Think.lang.Set the geo mode}</label>
+                <div>
+                  {$Think.lang.Support Geo Mode}:
+                  <input type="checkbox" name="isgeo" id="isgeo" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row page-header">
+            <h1>{$Think.lang.Developer Mode}</h1>
+          </div>
+          <div class="col-lg-12 setting">
+            <div class="col-lg-4">
+              {$Think.lang.Developer Mode}:
+              <input type="checkbox" name="developer" id="developer" />
+            </div>
+            <div class="col-lg-4">
+              {$Think.lang.Developer Site}:
+              <input type="text" name="developer_site" id="developer_site" />
+            </div>
+          </div>
+
+          <button class="new-button lightblue" id="savequality">{$Think.lang.Save}</button>
+          <button id="managenextstep" class="new-button lightblue" href="{$Think.config.WEB_URL}/Requester/launch">{$Think.lang.Next Step}</button>
+        </div>
+      </div>
+      <include file="Includes/bottom"/>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/error.js"></script>
+    <script src="__PUBLIC__/assets/js/Requester/managequality.js"></script>
+    <script src="__PUBLIC__/assets/js/Requester/siderbar.js"></script>
+
+
+<include file="Includes/footer"/>

@@ -1,0 +1,84 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/dashboard.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <include file="Includes/nav"/>
+    <div class="container-fluid container">
+      <div class="row bjbody">
+        <div class="col-sm-3 col-md-3 sidebar">
+          <section>
+            <h4>{$Think.lang.New Task}</h4>
+          </section>
+          <hr>
+          <h5>1. {$Think.lang.Design Task}</h5>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">{$Think.lang.Choose Template}</a></li>
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Build Task}</a></li>
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Data}</a></li>
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Preview}</a></li>
+          </ul>
+          <h5>2. {$Think.lang.Manage Quality}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a href="javascript:alert('Cann't proceed: you must choose one template!)">{$Think.lang.Qualification Test}</a></li>
+            <!--li><a href="javascript:alert('Cann't proceed: you must choose one template!)">{$Think.lang.Worker Requirement}</a></li-->
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Task Settings}</a></li>
+          </ul>
+          <h5>3. {$Think.lang.Get Results}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Publish}</a></li>
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Monitor}</a></li>
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Results}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-md-9 main">
+          <h1 class="page-header">{$Think.lang.Tasks Templates}</h1>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-6 placeholder">
+              <img class="img-responsive" alt="200x200" src="__PUBLIC__/assets/img/template1.png" data-holder-rendered="true">
+              <div><button class="template1 new-button lightblue" value="1"><h4>{$Think.lang.Label An Object}</h4></button></div>
+              <span class="text-muted">{$Think.lang.Label the color of Apple}</span>
+            </div>
+            <div class="col-xs-6 col-sm-6 placeholder">
+              <img class="img-responsive" alt="200x200" src="__PUBLIC__/assets/img/template2.png" data-holder-rendered="true">
+              <div><button class="template1 new-button lightblue" value="2"><h4>{$Think.lang.Compare Two Objects}</h4></button></div>
+              <span class="text-muted">{$Think.lang.Compare the sizes of Tiger and Elephant}</span>
+            </div>
+            <div class="col-xs-6 col-sm-6 placeholder">
+              <img class="img-responsive" alt="200x200" src="__PUBLIC__/assets/img/template3.png" data-holder-rendered="true">
+              <div><button class="template1 new-button lightblue" value="3"><h4>{$Think.lang.Label An Image}</h4></button></div>
+              <span class="text-muted">{$Think.lang.Label # of People in an Image}</span>
+            </div>
+            <div class="col-xs-6 col-sm-6 placeholder">
+              <img class="img-responsive" alt="200x200" src="__PUBLIC__/assets/img/template4.png" data-holder-rendered="true">
+              <div><button class="template1 new-button lightblue" value="4"><h4>{$Think.lang.Compare Two Images}</h4></button></div>
+              <span class="text-muted">{$Think.lang.Compare # of People in two Images}</span>
+            </div>
+            <div class="col-xs-6 col-sm-6 placeholder">
+              <img class="img-responsive" alt="200x200" src="__PUBLIC__/assets/img/template5.png" data-holder-rendered="true">
+              <div><button class="template1 new-button lightblue" value="5"><h4>{$Think.lang.Label One Webpage}</h4></button></div>
+              <span class="text-muted">{$Think.lang.Label the Content in an Webpage}</span>
+            </div>
+            <div class="col-xs-6 col-sm-6 placeholder">
+              <img class="img-responsive" alt="200x200" src="__PUBLIC__/assets/img/template6.png" data-holder-rendered="true">
+              <div><button class="template1 new-button lightblue" value="6"><h4>{$Think.lang.Compare Two Webpages}</h4></button></div>
+              <span class="text-muted">{$Think.lang.Compare the Content in two Webpages}</span>
+            </div>
+            <div class="col-xs-6 col-sm-6 placeholder">
+              <img class="img-responsive" alt="200x200" src="__PUBLIC__/assets/img/template5.png" data-holder-rendered="true">
+              <div><button class="template1 new-button lightblue" value="7"><h4>{$Think.lang.Classify One Object}</h4></button></div>
+              <span class="text-muted">{$Think.lang.Classify The Apple}</span>
+            </div>
+
+          </div>
+
+          
+        </div>
+      </div>
+     <include file="Includes/bottom"/>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/error.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/Requester/new_from_template.js"></script>
+
+<include file="Includes/footer"/>

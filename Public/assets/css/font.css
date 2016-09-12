@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+     font-family: 'yuweijmedium';
+    src: url('yuweijmedium.eot');
+    src: url('yuweijmedium.eot?#iefix') format('embedded-opentype'),
+         url('yuwei-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.yuwei-font-60px
+{
+ font-family: yuweijmedium;
+ font-size:60px;
+ color:#333;
+}
+
+.yuwei-font-30px
+{
+ font-family: yuweijmedium;
+ font-size:30px;
+}
+.hehe
+{
+
+  color:green;
+}

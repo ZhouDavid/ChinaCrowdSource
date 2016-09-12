@@ -1,0 +1,121 @@
+<html lang="en" class="win chrome chrome38 webkit webkit5"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>Worker Dashboard</title> 
+  <meta charset="utf-8"> 
+  <link href="css/origin.css" media="all" rel="stylesheet" type="text/css"> 
+  <link href="css/dashboard.css" media="all" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/nv.d3.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet"> 
+ </head> 
+ <body class="jobs" onload="init()"> 
+  <div id="content"> 
+   <div id="main" class="container-fluid"> 
+    <div id="main-wrapper" class="row-fluid"> 
+     <div class="span12 main-layout"> 
+      <div class="title-container"> 
+       <h4 class="job-title">
+        <span id="job-title">Dashboard</span> </h4> 
+      </div> 
+      <div id="job_dashboard" class="dashboard"> 
+        
+        
+       <div class="row shortgraph"> 
+        <div class="judgment_throughput span12">
+         <div class="navbar"> 
+          <div class="navbar-inner"> 
+           <a class="brand">Money</a> 
+           <span class="sublabel"><span>Estimated Completion:</span> Unknown</span> 
+          </div> 
+         </div> 
+         <div class="graph spinner">
+           <div class="span6">
+             <div id="chart_money_year" class='with-3d-shadow with-transitions'>
+              <svg> </svg>
+              <div><label for="">Money By Year</label></div>
+             </div>
+           </div>
+           <div class="span6">
+             <div id="chart_money_month" class='with-3d-shadow with-transitions'>
+              <svg> </svg>
+              <div><label for="">Money By Month</label></div>
+             </div>
+           </div>
+           <div class="span6">
+             <div id="chart_money_day" class='with-3d-shadow with-transitions'>
+              <svg> </svg>
+              <div><label for="">Money By Day</label></div>
+             </div>
+           </div>
+         </div> 
+        </div>
+        <div class="judgment_throughput span12">
+         <div class="navbar"> 
+          <div class="navbar-inner"> 
+           <a class="brand">Task</a> 
+           <span class="sublabel"><span>Estimated Completion:</span> Unknown</span> 
+          </div> 
+         </div> 
+         <div class="graph spinner">
+           <div class="span6">
+             <div id="chart_task_year" class='with-3d-shadow with-transitions'>
+              <svg> </svg>
+              <div><label for="">Task By Year</label></div>
+             </div>
+           </div>
+           <div class="span6">
+             <div id="chart_task_month" class='with-3d-shadow with-transitions'>
+              <svg> </svg>
+              <div><label for="">Task By Month</label></div>
+             </div>
+           </div>
+           <div class="span6">
+             <div id="chart_task_day" class='with-3d-shadow with-transitions'>
+              <svg> </svg>
+              <div><label for="">Task By Day</label></div>
+             </div>
+           </div>
+         </div> 
+        </div>  
+        <div class="judgment_throughput span12">
+         <div class="navbar"> 
+          <div class="navbar-inner"> 
+           <a class="brand">Question</a> 
+           <span class="sublabel"><span>Estimated Completion:</span> Unknown</span> 
+          </div> 
+         </div> 
+         <div class="graph spinner">
+           <div class="span6">
+             <div id="chart_question_year" class='with-3d-shadow with-transitions'>
+              <svg> </svg>
+              <div><label for="">Question By Year</label></div>
+             </div>
+           </div>
+           <div class="span6">
+             <div id="chart_question_month" class='with-3d-shadow with-transitions'>
+              <svg> </svg>
+              <div><label for="">Question By Month</label></div>
+             </div>
+           </div>
+           <div class="span6">
+             <div id="chart_question_day" class='with-3d-shadow with-transitions'>
+              <svg> </svg>
+              <div><label for="">Question By Day</label></div>
+             </div>
+           </div>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="push-footer"></div> 
+     </div> 
+    </div> 
+    <div id="footer"> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/dashboard.js"></script>
+  <script src="js/d3.v3.js"></script>
+  <script src="js/nv.d3.js"></script>
+</body></html>

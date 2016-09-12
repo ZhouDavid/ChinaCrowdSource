@@ -1,0 +1,180 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/dashboard.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/jquery_ui/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="__PUBLIC__/assets/jquery_ui/jquery-ui.js"></script>
+  </head>
+  <body>
+    <include file="Includes/nav"/>
+
+    <div class="container-fluid container" id="dialog-form" title="">
+      <div class="row bjbody">
+        <div class="col-sm-12 col-md-12 main">
+          <input type="hidden" id="template_id" value="{$template_id}" />
+          <input type="hidden" id="lang" value="{$Think.lang.lang}"/>
+          <input type="hidden" id="requester_token" value="{$token}"/>
+          <div class="upload_box">
+            <div style="padding-left: 15px;padding-right: 15px; position: relative;">
+
+              <if condition="$template_id=='1' || $template_id=='2'">
+                <h3 style="text-align:center; margin-bottom:30px">{$Think.lang.Add source data}</h3>
+              </if>
+
+              <if condition="$template_id=='3' || $template_id=='4'">
+                <h3 style="text-align:center; margin-bottom:30px">{$Think.lang.Add data URL}</h3>
+              </if>
+
+              <if condition="$template_id=='3' || $template_id=='4'">
+                <div>{$Think.lang.Upload Pic Instruction f}<a href="{$Think.config.WEB_URL}/Requester/upload_pic.html" target="_blank" style="color:red;text-decoration: underline;font-size:large;font-weight:bold;">{$Think.lang.here}</a>{$Think.lang.Upload Pic Instruction s}</div>
+              </if>
+              <div class="col-lg-6">
+                <form id="data_up" action="{$Think.config.API_URL}/workflow/append-data?token={$token}" enctype="multipart/form-data" method="post">
+                  <input type="hidden" id="task_id" name="task_id" value="{$task_id}"/>
+                  <input type='text' id='textfield1' style="padding: 4px 12px 8px 12px; border: 1px solid #cdcdcd; border-radius: 4px; width:191px;" placeholder="Input data"/>
+                  <input type='button' class='btn btn-default' value='{$Think.lang.Select}' />
+                  <input type="file" id="data" name="data" style="position: absolute;top: 0;left: 13px;height: 34px;width:275px; filter:alpha(opacity:0); opacity: 0;" onchange="document.getElementById('textfield1').value=this.value;"/>
+                <!--input type="submit" class='btn btn-default'/-->    
+                </form>
+              </div>
+              <div class="col-lg-6">
+                <button id="button_new" class='btn btn-default'>{$Think.lang.Submit}</button>
+              </div>
+
+            </div>
+            <div style="text-align:center">
+              <a id="sample_file" class="new-button lightblue" target="_blank" download>{$Think.lang.Sample File Download}</a>
+            </div>
+            <div style="text-align:center">
+              <p>{$Think.lang.upload data direction}</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid container">
+      <div class="row bjbody">
+        <div class="col-sm-3 col-md-3 sidebar">
+          <section>
+            <h4>{$Think.lang.New Task}</h4>
+          </section>
+          <hr>
+          <h5>1. {$Think.lang.Design Task}</h5>
+          <ul class="nav nav-sidebar">
+            <!--li><a href="#">{$Think.lang.Choose Template}</a></li-->
+            <li><a id="build_task" href="{$Think.config.WEB_URL}/Requester/build_job">{$Think.lang.Build Task}</a></li>
+            <li><a id="data" href="{$Think.config.WEB_URL}/Requester/upload_data">{$Think.lang.Data}</a></li>
+            <li><a id="preview" href="{$Think.config.WEB_URL}/Requester/preview">{$Think.lang.Preview}</a></li>
+          </ul>
+          <h5>2. {$Think.lang.Manage Quality}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a id="qualification_test" href="{$Think.config.WEB_URL}/Requester/qualificationtest">{$Think.lang.Qualification Test}</a></li>
+            <!--li><a href="#">{$Think.lang.Worker Requirement}</a></li-->
+            <li><a id="task_setting" href="{$Think.config.WEB_URL}/Requester/manage_quality">{$Think.lang.Task Settings}</a></li>
+          </ul>
+          <h5>3. {$Think.lang.Get Results}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a id="publish" href="{$Think.config.WEB_URL}/Requester/launch">{$Think.lang.Publish}</a></li>
+            <li class="active"><a id="monitor" href="{$Think.config.WEB_URL}/Requester/monitor">{$Think.lang.Monitor}</a></li>
+            <li><a id="results" href="{$Think.config.WEB_URL}/Requester/get_results">{$Think.lang.Results}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-md-9 main">
+          <div class="row page-header">
+            <h1>{$Think.lang.Settings}</h1>
+            <a class="new-button lightblue" href="{$Think.config.WEB_URL}/Requester/true_preview_all" target="_blank">{$Think.lang.Preview all questions}</a>
+            <!--a class="new-button lightblue" href="{$Think.config.WEB_URL}/Requester/append_data" target="_blank">{$Think.lang.Append data}</a-->
+            <button class="new-button lightblue" id="append_data">{$Think.lang.Append data}</button>
+          </div>
+          <div class="col-lg-12 setting">
+            <div class="col-lg-4">
+              <div class="value">{$finished_units/$total_units*100}%</div>
+              <div>
+                <lable>{$Think.lang.Finished units}</label>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="value">{$judgements_per_unit}</div>
+              <div>
+                <lable>{$Think.lang.Workers per unit}</label>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="value" style="color:green;">￥{$finished_units*$judgements_per_unit*$price}
+              </div>
+              <div>
+                <lable>{$Think.lang.Cost}</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 setting">
+            <div class="col-lg-4">
+              <div class="value">{$total_units}</div>
+              <div>
+                <lable>{$Think.lang.All units}</label>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="value">{$units_for_qualification_test}</div>
+              <div>
+                <lable>{$Think.lang.Qualification units}</label>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="value">{$golden_units_in_first_pages}</div>
+              <div>
+                <lable>{$Think.lang.Golden units}</label>
+              </div>
+            </div>
+          </div>
+          <div class="row page-header">
+            <h1>{$Think.lang.Real-time Statistics}</h1>
+          </div>
+          <div class="col-lg-12 setting">
+            <div class="col-lg-4">
+              <div class="value">{$n_finished_units}</div>
+              <div>
+                <lable>{$Think.lang.Finished units}</label>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="value">{$n_workers}</div>
+              <div>
+                <lable>{$Think.lang.Workers}</label>
+              </div>
+            </div>
+            <!--<div class="col-lg-4">
+              <div class="value"></div>
+              <div>
+                <lable>{$Think.lang.Cost}</label>
+              </div>
+            </div>-->
+          </div>
+
+          <!--div class="row page-header">
+            <h1>{$Think.lang.Developer Mode}</h1>
+          </div>
+          <div class="col-lg-12 setting">
+            <div class="col-lg-4">
+              {$Think.lang.Developer Mode}:
+              <input type="checkbox" name="developer" id="developer" />
+            </div>
+            <div class="col-lg-4">
+              {$Think.lang.Developer Site}:
+              <input type="text" name="developer_site" id="developer_site" />
+            </div>
+            <button class="new-button lightblue" id="savedeveloper">{$Think.lang.Save}</button>
+          </div-->
+
+        </div>
+      </div>
+      <include file="Includes/bottom"/>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/assets/jquery/jquery.form.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/strings.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/error.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/Requester/siderbar.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/Requester/monitor.js"></script>
+
+<include file="Includes/footer"/>

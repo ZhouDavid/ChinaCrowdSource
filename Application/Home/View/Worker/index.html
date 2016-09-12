@@ -1,0 +1,134 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/carousel.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/dashboard.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+  </head>
+  
+<body role="document">
+    <include file="Includes/nav"/>
+    <div class="container marketing pagebody">
+      <div class="row">
+        <div class="col-lg-12 main">
+          <div class="row page-header">
+            <div class="col-lg-12">
+              <h1>{$Think.lang.My Tasks}</h1>
+            </div>
+
+          </div>
+          
+          <div class="row page-header">
+          	<div class="col-lg-12 form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">{$Think.lang.Tags}
+                        </label>
+                        <div id='interest-first-column' class="col-sm-2 align-left">
+                          <label id="first-interest"class="checkbox-inline margin-left-10">
+                            <input type="checkbox" id="first-tag" name="language" value="Arabic"> {$Think.lang.Arabic}
+                          </label>
+                        </div>
+                        <div id='interest-second-column' class="col-sm-2 align-left">
+                        </div>
+                        <div id='interest-third-column' class="col-sm-2 align-left">
+                        </div>
+                        <div class="col-sm-2">
+                          <button type="button" id="filter-button" onclick="filter()" class="btn btn-default">{$Think.lang.Filter}</button>
+                        </div>
+             </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th><a href="{$Think.config.WEB_URL}/Worker/index?ordering={$current_reverse_sort}id&tags={$current_tags}&search={$current_search}">{$Think.lang.ID}<if condition="$current_ordering_field == 'id' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'id' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th><a href="{$Think.config.WEB_URL}/Worker/index?ordering={$current_reverse_sort}title&tags={$current_tags}&search={$current_search}">{$Think.lang.Title}<if condition="$current_ordering_field == 'title' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'title' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th><a href="{$Think.config.WEB_URL}/Worker/index?ordering={$current_reverse_sort}timestamp&tags={$current_tags}&search={$current_search}">{$Think.lang.Time}<if condition="$current_ordering_field == 'timestamp' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'timestamp' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th><a href="{$Think.config.WEB_URL}/Worker/index?ordering={$current_reverse_sort}price&tags={$current_tags}&search={$current_search}">{$Think.lang.Price}({$Think.lang.per question})<if condition="$current_ordering_field == 'price' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'price' && $current_sort == '-'"/>&darr;</if></a></th>
+				  <th><a href="{$Think.config.WEB_URL}/Worker/index?ordering={$current_reverse_sort}units_for_qualification_test&tags={$current_tags}&search={$current_search}">{$Think.lang.Qualification test units}<if condition="$current_ordering_field == 'units_for_qualification_test' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'units_for_qualification_test' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <!--<th>{$Think.lang.Available units}/<a href="{$Think.config.WEB_URL}/Worker/index?ordering={$current_reverse_sort}total_units&tags={$current_tags}&search={$current_search}">{$Think.lang.All units}<if condition="$current_ordering_field == 'total_units' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'total_units' && $current_sort == '-'"/>&darr;</if></a></th>-->
+                  <th><a href="{$Think.config.WEB_URL}/Worker/index?ordering={$current_reverse_sort}total_units&tags/tags={$current_tags}&search={$current_search}">{$Think.lang.All units}<if condition="$current_ordering_field == 'total_units' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'total_units' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th><a href="{$Think.config.WEB_URL}/Worker/index?ordering={$current_reverse_sort}tags&tags={$current_tags}&search={$current_search}">{$Think.lang.Tags}<if condition="$current_ordering_field == 'tags' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'tags' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th><a href="{$Think.config.WEB_URL}/Worker/index?ordering={$current_reverse_sort}template_type&tags={$current_tags}&search={$current_search}">{$Think.lang.Type}<if condition="$current_ordering_field == 'template_type' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'template_type' && $current_sort == '-'"/>&darr;</if></a></th>
+				  <th style="width:300px;"><a href="{$Think.config.WEB_URL}/Worker/index?ordering={$current_reverse_sort}description&tags={$current_tags}&search={$current_search}">{$Think.lang.Description}<if condition="$current_ordering_field == 'description' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'description' && $current_sort == '-'"/>&darr;</if></a></th>
+                </tr>
+              </thead>
+              <tbody>
+              	<volist name="my_task_list.results" id="my_task">
+                <tr data-href="{$Think.config.WEB_URL}/Worker/DoJob/task_id/{$my_task['id']}">
+                  <td>{$my_task['id']}</td>
+                  <td>{$my_task['title']}</td>
+                  <td>{$my_task['timestamp']}</td>
+                  <td>{$my_task['price']}</td>
+				  <td>{$my_task['units_for_qualification_test']}</td>
+                  <!--<td>{$my_task['total_units']-$my_task['finished_units']}/{$my_task['total_units']}</td>-->
+                  <td>{$my_task['total_units']}</td>
+                  <td>
+                    <volist name="my_task.tags" id="tag">
+                      <eq name="Think.lang.lang" value="en-us">
+                        {$tag};
+                      </eq>
+                      <eq name="Think.lang.lang" value="zh-cn">
+                        <?php
+                          $hash=array("Technology"=>"科技","Life"=>"生活","Entertainment"=>"休闲","Sports"=>"体育","Education"=>"教育","Health"=>"健康");
+                          echo $hash[$tag];
+                        ?>;
+                      </eq>
+                    </volist>
+                  </td>
+                  <td>
+                        <?php
+                          $hash=array("1"=>L('Label An Object'),"2"=>L('Compare Two Objects'),"3"=>L('Label An Image'),"4"=>L('Compare Two Images'));
+                          echo $hash[$my_task['template_type']];
+                        ?>
+                  </td>
+                  <td style="width:300px;">{$my_task['description']}</td>
+                </tr>
+                </volist>
+              </tbody>
+            </table>
+            <div><ul class="pagination">
+            	<if condition="$my_task_list['previous'] != ''"><li><a href="{$Think.config.WEB_URL}/Worker/index?page={$current_page-1}&ordering={$current_ordering}&tags={$current_tags}&search={$current_search}"><</a></li></if>
+            	<if condition="$my_task_list['previous'] != ''"><li><a href="{$Think.config.WEB_URL}/Worker/index?page={$current_page-1}&ordering={$current_ordering}&tags={$current_tags}&search={$current_search}">{$current_page-1}</a></li></if>
+            	<li><a>{$current_page}</a></li>
+            	<if condition="$my_task_list['next'] != ''"><li><a href="{$Think.config.WEB_URL}/Worker/index?page={$current_page+1}&ordering={$current_ordering}&tags={$current_tags}&search={$current_search}">{$current_page+1}</a></li></if>
+            	<if condition="$my_task_list['count']/10 gt $current_page+2"><li><a href="{$Think.config.WEB_URL}/Worker/index?page={$current_page+2}&ordering={$current_ordering}&tags={$current_tags}&search={$current_search}">{$current_page+2}</a></li></if>
+            	<if condition="$my_task_list['count']/10 gt $current_page+3"><li><a href="{$Think.config.WEB_URL}/Worker/index?page={$current_page+3}&ordering={$current_ordering}&tags={$current_tags}&search={$current_search}">{$current_page+3}</a></li></if>
+            	<if condition="$my_task_list['next'] != ''"><li><a href="{$Think.config.WEB_URL}/Worker/index?page={$current_page+1}&ordering={$current_ordering}&tags={$current_tags}&search={$current_search}">></a></li></if>
+            </ul></div>
+          </div>
+        </div>
+      </div>
+      <include file="Includes/bottom"/>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/Worker/index.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/profile/js/profile.js"></script>
+    <script type="text/javascript">
+    
+    var current_tags = "{$current_tags}";
+    //console.log("current_tags = "+current_tags);
+	if(current_tags == '') {
+		init_interest_list_for_worker();
+	}
+	else {
+		init_interest_list_for_worker_with_tags(current_tags);
+	}
+	
+	function filter() {
+		var data = {};
+		var interest = new Array();
+		$('input:checkbox[name=interest]:checked').each(function(){
+			interest.push($(this).val());
+		});
+		var tags = '';
+		if(interest.length > 0) {
+			data['tags'] = interest;
+			var tags = data['tags'].join(',');
+		}
+		
+		//console.log(data);
+	
+		location.href = web_url+"/Worker/index/tags/"+tags;
+	}
+	
+    </script>
+
+<include file="Includes/footer"/>

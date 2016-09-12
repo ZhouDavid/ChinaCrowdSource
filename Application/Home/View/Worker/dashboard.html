@@ -1,0 +1,140 @@
+<include file="Includes/header" />
+<!-- Some additional css -->
+    <!-- <link href="__PUBLIC__/assets/dashboard/css/origin.css" media="all" rel="stylesheet" type="text/css"> --> 
+    <link href="__PUBLIC__/assets/dashboard/css/dashboard.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="__PUBLIC__/assets/dashboard/css/nv.d3.css">
+    <!-- <link href="__PUBLIC__/assets/dashboard/css/bootstrap.min.css" rel="stylesheet">  -->
+</head>
+<body class="jobs" onload="init()" role="document">
+	<include file="Includes/nav" />
+
+   <div class="container marketing pagebody">
+    <div class="row"> 
+     <div class="col-lg-12 main"> 
+      <div class="row page-header">
+            <div class="col-lg-12">
+              <h1>{$Think.lang.Dashboard}</h1>
+            </div>
+          </div>
+      <div id="job_dashboard" class="dashboard"> 
+        
+        
+       <div class="row shortgraph"> 
+        <div class="judgment_throughput col-lg-12">
+         <div class="navbar"> 
+          <div class="navbar-inner">
+          <div class="col-sm-1 align-left">
+            <p class="brand">{$Think.lang.Money}</p> 
+          </div> 
+          <div class="col-sm-8">
+          </div>
+          <div class="col-sm-3">
+            <div class="btn-group" data-toggle="buttons">
+              <label id="money-day-checkbox" name="Male" class="btn btn-default active">
+                <input type="radio" name="sex" value="m" autocomplete="off"> {$Think.lang.Day}
+              </label>
+              <!--<label id="money-week-checkbox" name="Female" class="btn btn-default">
+                <input type="radio" name="sex" value="f" autocomplete="off" checked="checked"> {$Think.lang.Week}
+              </label>-->
+              <label id="money-month-checkbox" name="Female" class="btn btn-default">
+                <input type="radio" name="sex" value="f" autocomplete="off" checked="checked"> {$Think.lang.Month}
+              </label>
+              <label id="money-year-checkbox" name="Female" class="btn btn-default">
+                <input type="radio" name="sex" value="f" autocomplete="off" checked="checked"> {$Think.lang.Year}
+              </label>
+            </div>
+          </div>
+          </div> 
+         </div> 
+         <div class="graph spinner">
+          
+           <div class="col-md-1"></div>
+           <div class="col-md-9 chart-area">
+              <svg id="chart_money"></svg>
+           </div>
+           <div class="col-md-2"></div>
+         </div> 
+        </div>
+        <div class="judgment_throughput col-lg-12">
+         <div class="navbar"> 
+          <div class="navbar-inner">
+          <div class="col-sm-1 align-left">
+            <p class="brand">{$Think.lang.Task}</p> 
+          </div> 
+          <div class="col-sm-8">
+          </div>
+          <div class="col-sm-3">
+            <div class="btn-group" data-toggle="buttons">
+              <label id="task-day-checkbox" name="Male" class="btn btn-default active">
+                <input type="radio" name="sex" id="option1" value="m" autocomplete="off"> {$Think.lang.Day}
+              </label>
+              <!--<label id="task-week-checkbox" name="Female" class="btn btn-default">
+                <input type="radio" name="sex" id="option2" value="f" autocomplete="off" checked="checked"> {$Think.lang.Week}
+              </label>-->
+              <label id="task-month-checkbox" name="Female" class="btn btn-default">
+                <input type="radio" name="sex" id="option3" value="f" autocomplete="off" checked="checked"> {$Think.lang.Month}
+              </label>
+              <label id="task-year-checkbox" name="Female" class="btn btn-default">
+                <input type="radio" name="sex" id="option3" value="f" autocomplete="off" checked="checked"> {$Think.lang.Year}
+              </label>
+            </div>
+          </div>
+          </div> 
+         </div> 
+         <div class="graph spinner">
+            <div class="col-md-1"></div>
+           <div class="col-md-9 chart-area">
+              <svg id="chart_task"></svg>
+           </div>
+           <div class="col-md-2"></div>
+         </div> 
+        </div>
+      <div class="judgment_throughput col-lg-12">
+         <div class="navbar"> 
+          <div class="navbar-inner">
+          <div class="col-sm-1 align-left">
+            <p class="brand">{$Think.lang.Question}</a> 
+          </div> 
+          <div class="col-sm-8">
+          </div>
+          <div class="col-sm-3">
+            <div class="btn-group" data-toggle="buttons">
+              <label id="question-day-checkbox" name="Male" class="btn btn-default active">
+                <input type="radio" name="sex" id="option1" value="m" autocomplete="off"> {$Think.lang.Day}
+              </label>
+              <!--<label id="question-week-checkbox" name="Female" class="btn btn-default">
+                <input type="radio" name="sex" id="option2" value="f" autocomplete="off" checked="checked"> {$Think.lang.Week}
+              </label>-->
+              <label id="question-month-checkbox" name="Female" class="btn btn-default">
+                <input type="radio" name="sex" id="option3" value="f" autocomplete="off" checked="checked"> {$Think.lang.Month}
+              </label>
+              <label id="question-year-checkbox" name="Female" class="btn btn-default">
+                <input type="radio" name="sex" id="option3" value="f" autocomplete="off" checked="checked"> {$Think.lang.Year}
+              </label>
+            </div>
+          </div>
+          </div> 
+         </div> 
+         <div class="graph spinner">
+            <div class="col-md-1"></div>
+           <div class="col-md-9 chart-area">
+              <svg id="chart_question"></svg>
+           </div>
+           <div class="col-md-2"></div>
+           <div class="col-lg-3"></div>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <include file="Includes/bottom" />
+	</div>
+	<!-- /.container -->
+	<!-- Some additional javascript -->
+  <!-- <script type="text/javascript" src="__PUBLIC__/assets/dashboard/js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/assets/dashboard/js/bootstrap.min.js"></script> -->
+  <script type="text/javascript" src="__PUBLIC__/assets/dashboard/js/dashboard_worker.js"></script>
+  <script src="__PUBLIC__/assets/dashboard/js/d3.v3.js"></script>
+  <script src="__PUBLIC__/assets/dashboard/js/nv.d3.js"></script>
+<include file="Includes/footer" />

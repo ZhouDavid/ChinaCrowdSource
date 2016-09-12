@@ -1,0 +1,61 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/dashboard.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <include file="Includes/nav"/>
+    <div class="container-fluid container">
+      <div class="row bjbody">
+        <div class="col-sm-3 col-md-3 sidebar">
+          <section>
+            <h4>{$Think.lang.New Task}</h4>
+          </section>
+          <hr>
+          <h5>1. {$Think.lang.Design Task}</h5>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="{$Think.config.WEB_URL}/Requester/new_from_template">{$Think.lang.Choose Template}</a></li>
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Build Task}</a></li>
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Data}</a></li>
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Preview}</a></li>
+          </ul>
+          <h5>2. {$Think.lang.Manage Quality}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Qualification Test}</a></li>
+            <!--li><a href="#">{$Think.lang.Worker Requirement}</a></li-->
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Task Settings}</a></li>
+          </ul>
+          <h5>3. {$Think.lang.Get Results}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Publish}</a></li>
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Monitor}</a></li>
+            <li><a href="javascript:alert('Cannot proceed: you must choose one template!')">{$Think.lang.Results}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-md-9 main">
+          <div class="row page-header">
+            <h1>{$Think.lang.Label}</h1>
+            <p><a href="{$Think.config.WEB_URL}/Requester/new_from_template">← {$Think.lang.Back to Templates}</a></p>
+          </div>
+          <h4>{$Think.lang.Template Description}
+            <button id="use_this_template" class="btn btn-blue filled pull-right">{$Think.lang.Use This Template}</button>
+          </h4>
+          <p>
+          <if condition="$template_id=='1'">{$Think.lang.Template one Introduction}</if>
+          <if condition="$template_id=='2'">{$Think.lang.Template two Introduction}</if>
+          <if condition="$template_id=='3'">{$Think.lang.Template three Introduction}</if>
+          <if condition="$template_id=='4'">{$Think.lang.Template four Introduction}</if>
+          <if condition="$template_id=='5'">{$Think.lang.Template five Introduction}</if>
+          <if condition="$template_id=='6'">{$Think.lang.Template six Introduction}</if>
+          </p>
+          <hr>
+          <h4>{$Think.lang.What Workers See}</h4>
+          <iframe src="{$Think.config.WEB_URL}/Requester/template1"></iframe>
+        </div>
+      </div>
+      <include file="Includes/bottom"/>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/error.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/assets/js/Requester/new_job.js"></script>
+
+
+<include file="Includes/footer"/>

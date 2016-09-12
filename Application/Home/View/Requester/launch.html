@@ -1,0 +1,73 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/dashboard.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <img id="progressImgage" class="progressing hide_progress" alt="" src="__PUBLIC__/assets/img/ajax-loader.gif"/>
+    <div id="maskOfProgressImage" class="mask hide_progress"></div>
+    <include file="Includes/nav"/>
+    <div class="container-fluid container">
+      <div class="row bjbody">
+        <div class="col-sm-3 col-md-3 sidebar">
+          <section>
+            <h4>{$Think.lang.New Task}</h4>
+          </section>
+          <hr>
+          <h5>1. {$Think.lang.Design Task}</h5>
+          <ul class="nav nav-sidebar">
+            <!--li><a href="#">{$Think.lang.Choose Template}</a></li-->
+            <li><a id="build_task" href="{$Think.config.WEB_URL}/Requester/build_job">{$Think.lang.Build Task}</a></li>
+            <li><a id="data" href="{$Think.config.WEB_URL}/Requester/upload_data">{$Think.lang.Data}</a></li>
+            <li><a id="preview" href="{$Think.config.WEB_URL}/Requester/preview">{$Think.lang.Preview}</a></li>
+          </ul>
+          <h5>2. {$Think.lang.Manage Quality}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a id="qualification_test" href="{$Think.config.WEB_URL}/Requester/qualificationtest">{$Think.lang.Qualification Test}</a></li>
+            <!--li><a href="#">{$Think.lang.Worker Requirement}</a></li-->
+            <li><a id="task_setting" href="{$Think.config.WEB_URL}/Requester/manage_quality">{$Think.lang.Task Settings}</a></li>
+          </ul>
+          <h5>3. {$Think.lang.Get Results}</h5>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a id="publish" href="{$Think.config.WEB_URL}/Requester/launch">{$Think.lang.Publish}</a></li>
+            <li><a id="monitor" href="{$Think.config.WEB_URL}/Requester/monitor">{$Think.lang.Monitor}</a></li>
+            <li><a id="results" href="{$Think.config.WEB_URL}/Requester/get_results">{$Think.lang.Results}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-md-9 main">
+          <input type="hidden" id="requester_token" value="{$token}" />
+          <input type="hidden" id="task_id" value="{$task_id}" />
+          <div class="row page-header">
+            <h1>{$title}</h1>
+          </div>
+
+          <div class="upload_box">
+            <div style="padding-left: 15px;padding-right: 15px; position: relative;">
+              <h3 style="text-align:center; margin-bottom:30px">{$Think.lang.Publish Task}</h3>
+              <div>{$Think.lang.This is your budget}</div>
+              <div><span>{$Think.lang.Number of units for this task}</span><span>{$total_units}</span></div>
+              <div><span>{$Think.lang.Price for every unit}</span><span>￥{$price}</span></div>
+              <div><span>{$Think.lang.Number of people for every unit}</span><span>{$judgements_per_unit}</span></div>
+              <div><span>{$Think.lang.Total}</span><span>￥{$total}</span></div>
+              <div><span>{$Think.lang.My Money}</span><span>￥{$money}</span></div>
+            </div>
+            <div style="text-align:center">
+              <if condition="$diff egt 0">
+                <a id="publishtask" class="new-button lightblue">{$Think.lang.Publish}</a>
+              </if>
+              <if condition="$diff lt 0">
+                <a id="add_fund" class="new-button lightblue" href="{$Think.config.WEB_URL}/Requester/Profile">{$Think.lang.Add Fund}</a>
+              </if>
+
+
+            </div>
+          </div>
+          <!--iframe src="{$Think.config.WEB_URL}/Requester/true_preview"></iframe-->
+        </div>
+      </div>
+      <include file="Includes/bottom"/>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/error.js"></script>
+    <script src="__PUBLIC__/assets/js/Requester/publish.js"></script>
+    <script src="__PUBLIC__/assets/js/Requester/siderbar.js"></script>
+
+<include file="Includes/footer"/>

@@ -1,0 +1,111 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/dashboard.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <include file="Includes/nav"/>
+    <div class="container-fluid container">
+      <div class="row bjbody">
+        <div class="col-sm-3 col-md-3 sidebar">
+          <section>
+            <h4>{$Think.lang.New Task}</h4>
+          </section>
+          <hr>
+          <h5>1. {$Think.lang.Design Task}</h5>
+          <ul class="nav nav-sidebar">
+            <!--li><a href="#">{$Think.lang.Choose Template}</a></li-->
+            <li><a id="build_task" href="{$Think.config.WEB_URL}/Requester/build_job">{$Think.lang.Build Task}</a></li>
+            <li><a id="data" href="{$Think.config.WEB_URL}/Requester/upload_data">{$Think.lang.Data}</a></li>
+            <li><a id="preview" href="{$Think.config.WEB_URL}/Requester/preview">{$Think.lang.Preview}</a></li>
+          </ul>
+          <h5>2. {$Think.lang.Manage Quality}</h5>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a id="qualification_test" href="#">{$Think.lang.Qualification Test}</a></li>
+            <!--li><a href="#">{$Think.lang.Worker Requirement}</a></li-->
+            <li><a id="task_setting" href="{$Think.config.WEB_URL}/Requester/manage_quality">{$Think.lang.Task Settings}</a></li>
+          </ul>
+          <h5>3. {$Think.lang.Get Results}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a id="publish" href="{$Think.config.WEB_URL}/Requester/launch">{$Think.lang.Publish}</a></li>
+            <li><a id="monitor" href="{$Think.config.WEB_URL}/Requester/monitor">{$Think.lang.Monitor}</a></li>
+            <li><a id="results" href="{$Think.config.WEB_URL}/Requester/get_results">{$Think.lang.Results}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-md-9 main">
+          <div class="row page-header">
+            <h1>{$title}</h1>
+          </div>
+          <div class="upload_box" style="height:auto">
+            <div style="padding-left: 15px; position: relative;">
+              <h3 style="text-align:center; margin-bottom:30px">{$Think.lang.Add qualification test data}</h3>
+              <div class="col-lg-9">
+                <form id="qualification_up" action="{$Think.config.API_URL}/workflow/upload-golden-data?token={$token}" enctype="multipart/form-data" method="post">
+                  <input type="hidden" id="task_id" name="task_id"/>
+                  <input type='text' id='textfield1' style="padding: 4px 12px 8px 12px; border: 1px solid #cdcdcd; border-radius: 4px; width:191px;" placeholder="Input data"/>
+                  <input type='button' class='btn btn-default' value='{$Think.lang.Select}' />
+                  <input type="file" id="data" name="data" style="position: absolute;top: 0;left: 13px;height: 34px;width:275px; filter:alpha(opacity:0); opacity: 0;" onchange="document.getElementById('textfield1').value=this.value;"/>
+                <!--input type="submit" class='btn btn-default'/-->    
+                </form>
+              </div>
+              <div class="col-lg-3">
+                <button id="button_up" class='btn btn-default'>{$Think.lang.Submit}</button>
+              </div>
+            </div>
+            <div style="text-align:center">
+              <a id="sample_file_qualification" class="new-button lightblue" target="_blank" download>{$Think.lang.Sample File Download}</a>
+            </div>
+            <div style="text-align:center">
+              <p>{$Think.lang.qualification test direction}</p>
+            </div>
+          </div>
+          <div class="col-lg-12 setting" style="margin-top:50px;">
+            <div class="col-lg-6">
+              <h4>{$Think.lang.Qualification Tests Details}</h4>
+              <div class="test_hr">
+                <label>{$Think.lang.Set the number of units for qualification test before workers do this task}</label>
+                <div>
+                  <input type="number" id="units_for_qualification_test" class="input_b" value="{$units_for_qualification_test}"/>
+                  <span>{$Think.lang.Units for qualification test}</span>
+                </div>
+              </div>
+              <div class="test_hr">
+                <label>{$Think.lang.Set the number of min accuracy of qualification test}</label>
+                <div>
+                  <span>{$Think.lang.Min accuracy for qualification test}:</span>
+                  <input type="number" id="min_accuracy_for_qualification_test" class="input_b" value="{$min_accuracy}"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h4>{$Think.lang.Golden Tests Details}</h4>
+              <div class="test_hr">
+                <label>{$Think.lang.Set the number of total golden units}</label>
+                <div>
+                  <input type="number" id="golden_units_in_first_pages" name="total_golden_units" class="input_b" value="{$golden_units_in_first_pages}"/>
+                  <span>{$Think.lang.Golden units}</span>
+                </div>
+              </div>
+              <div class="test_hr">
+                <label>{$Think.lang.Set the number of min accuracy of golden test}</label>
+                <div>
+                  <span>{$Think.lang.Min accuracy for golden test}:</span>
+                  <input type="number" id="min_accuracy_hidden" class="input_b" value="{$min_accuracy_hidden}"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="new-button lightblue" id="savequalification">{$Think.lang.Save}</button>
+          <button id="qualificationnextstep" class="new-button lightblue">{$Think.lang.Next Step}</button>
+          
+        </div>
+      </div>
+      <include file="Includes/bottom"/>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/assets/jquery/jquery.form.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/error.js"></script>
+    <script src="__PUBLIC__/assets/js/Requester/qualificationtest.js"></script>
+    <script src="__PUBLIC__/assets/js/Requester/siderbar.js"></script>
+    <!--script type="text/javascript" src="__PUBLIC__/assets/mustache/mustache.min.js"></script>
+    <script src="__PUBLIC__/assets/js/buildjob.js"></script-->
+
+<include file="Includes/footer"/>

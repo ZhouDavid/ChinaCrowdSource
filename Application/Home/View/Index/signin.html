@@ -1,0 +1,82 @@
+<body role="document">
+<include file="Includes/header"/>
+<!-- Some additional css -->
+<link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+</head>  
+<body role="document">
+<include file="Includes/nav"/>
+
+    <div class="container marketing pagebody">
+        <div class="row">
+          <h2><span style="color: #444444;">{$Think.lang.Who are you signing in as?}</span></h2>
+          <div class="col-lg-6">
+            <h2><span style="color: #254467;">{$Think.lang.Requester Sign In}</span></h2>
+            <div id="auth">
+      
+      <div class="well">
+        <div class="heading">
+          <h3>{$Think.lang.Requester Sign In}</h3>
+          <div class="already-have-account">{$Think.lang.Don't have an account?}
+            <a href="{$Think.config.WEB_URL}/Index/signup" class="switch-login">{$Think.lang.Sign Up}</a>
+          </div>
+        </div>
+        <div class="authentication" id="requester-login-form">
+          <div class="control-group string optional user_name">
+            <label class="string optional control-label" for="user-name">{$Think.lang.User Name}</label>
+            <div class="controls">
+              <input class="string optional" id="user_name_requester" name="user[name]" placeholder="{$Think.lang.User Name}" size="40" type="text" onkeydown="subRSigninCheck();">
+            </div>
+          </div>
+          <div class="control-group password optional user_password">
+            <label class="password optional control-label" for="user_password">{$Think.lang.Password}</label>
+            <div class="controls">
+              <input class="password optional" id="user_password_requester" name="user[password]" pattern=".{8,128}" placeholder="{$Think.lang.Password}" size="40" type="password" onkeydown="subRSigninCheck();">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" name="commit" id="requester_signin" value="Sign In">{$Think.lang.Sign In}</button>
+            <p><a href="{$Think.config.WEB_URL}/Index/reset_requester">{$Think.lang.Forgot Password?}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+          </div>
+          <div class="col-lg-6">
+            <h2><span style="color: #00ab4d;">{$Think.lang.Worker Sign In}</span></h2>
+            <div id="auth">
+      
+      <div class="well">
+        <div class="heading">
+          <h3>{$Think.lang.Worker Sign In}</h3>
+          <div class="already-have-account">{$Think.lang.Don't have an account?}
+            <a href="{$Think.config.WEB_URL}/Index/signup" class="switch-login">{$Think.lang.Sign Up}</a>
+          </div>
+        </div>
+        <div class="authentication" id="worker-login-form">
+          <div class="control-group string optional user_name">
+            <label class="string optional control-label" for="user-name">{$Think.lang.User Name}</label>
+            <div class="controls">
+              <input class="string optional" id="user_name_worker" name="user[name]" placeholder="{$Think.lang.User Name}" size="40" type="text" onkeydown="subWSigninCheck();">
+            </div>
+          </div>
+          <div class="control-group password optional user_password">
+            <label class="password optional control-label" for="user_password">{$Think.lang.Password}</label>
+            <div class="controls">
+              <input class="password optional" id="user_password_worker" name="user[password]" pattern=".{8,128}" placeholder="{$Think.lang.Password}" size="40" type="password" onkeydown="subWSigninCheck();">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" name="commit" id="worker_signin" value="Sign In">{$Think.lang.Sign In}</button>
+            <p><a href="{$Think.config.WEB_URL}/Index/reset_worker">{$Think.lang.Forgot Password?}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+          </div>
+        </div>
+
+<include file="Includes/bottom"/>
+</div><!-- /.container -->
+<!-- Some additional javascript -->
+<script type="text/javascript" src="__PUBLIC__/assets/js/index.js"></script>
+<include file="Includes/footer"/>

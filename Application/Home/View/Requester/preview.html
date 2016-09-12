@@ -1,0 +1,53 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/dashboard.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <include file="Includes/nav"/>
+    <div class="container-fluid container">
+      <div class="row bjbody">
+        <div class="col-sm-3 col-md-3 sidebar">
+          <section>
+            <h4>{$Think.lang.New Task}</h4>
+          </section>
+          <hr>
+          <h5>1. {$Think.lang.Design Task}</h5>
+          <ul class="nav nav-sidebar">
+            <!--li><a href="#">{$Think.lang.Choose Template}</a></li-->
+            <li><a id="build_task" href="{$Think.config.WEB_URL}/Requester/build_job">{$Think.lang.Build Task}</a></li>
+            <li><a id="data" href="{$Think.config.WEB_URL}/Requester/upload_data">{$Think.lang.Data}</a></li>
+            <li class="active"><a id="preview" href="{$Think.config.WEB_URL}/Requester/preview">{$Think.lang.Preview}</a></li>
+          </ul>
+          <h5>2. {$Think.lang.Manage Quality}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a id="qualification_test" href="{$Think.config.WEB_URL}/Requester/qualificationtest">{$Think.lang.Qualification Test}</a></li>
+            <!--li><a href="#">{$Think.lang.Worker Requirement}</a></li-->
+            <li><a id="task_setting" href="{$Think.config.WEB_URL}/Requester/manage_quality">{$Think.lang.Task Settings}</a></li>
+          </ul>
+          <h5>3. {$Think.lang.Get Results}</h5>
+          <ul class="nav nav-sidebar">
+            <li><a id="publish" href="{$Think.config.WEB_URL}/Requester/launch">{$Think.lang.Publish}</a></li>
+            <li><a id="monitor" href="{$Think.config.WEB_URL}/Requester/monitor">{$Think.lang.Monitor}</a></li>
+            <li><a id="results" href="{$Think.config.WEB_URL}/Requester/get_results">{$Think.lang.Results}</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-md-9 main">
+          <div class="row page-header">
+            <h1>{$title}</h1>
+          </div>
+          <a class="new-button lightblue" href="{$Think.config.WEB_URL}/Requester/build_job">{$Think.lang.Redesign Task}</a>            
+          <a class="new-button lightblue" href="{$Think.config.WEB_URL}/Requester/qualificationtest">{$Think.lang.Next Step}</a>
+          <hr>
+          <h4>{$Think.lang.What Workers See}</h4>
+          <iframe src="{$Think.config.WEB_URL}/Requester/true_preview"></iframe>
+          <!--button class="new-button lightblue" id="publish">Publish</button-->
+        </div>
+      </div>
+      <include file="Includes/bottom"/>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/error.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/Requester/preview.js"></script>
+    <script src="__PUBLIC__/assets/js/Requester/siderbar.js"></script>
+
+
+<include file="Includes/footer"/>

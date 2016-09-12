@@ -1,0 +1,54 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/dashboard.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid container">
+      <div class="row bjbody">
+        <div class="col-sm-12 col-md-12 main">
+          <input type="hidden" id="template_id" value="{$template_id}" />
+          <input type="hidden" id="lang" value="{$Think.lang.lang}"/>
+          <div class="row page-header">
+            <h1></h1>
+          </div>
+
+          <div class="upload_pic_box">
+            <div style="padding-left: 15px;padding-right: 15px; position: relative;">
+              <h3 style="text-align:center; margin-bottom:30px">{$Think.lang.Add pic data}</h3>
+              
+              
+              <div>{$Think.lang.Upload Pic Notice}</div>
+              <div class="col-lg-6">
+                <form id="pic_up" action="{$Think.config.API_URL}/workflow/upload-zip?token={$token}&task_id={$task_id}" enctype="multipart/form-data" method="post">
+                  <!--input type="hidden" id="task_id" name="task_id"/-->
+                  <input type='text' id='textfield2' style="padding: 4px 12px 8px 12px; border: 1px solid #cdcdcd; border-radius: 4px; width:191px;" placeholder="Input pic"/>
+                  <input type='button' class='btn btn-default' value='{$Think.lang.Select}' />
+                  <input type="file" name="file" style="position: absolute;top: 0;left: 13px;height: 34px;width:275px; filter:alpha(opacity:0); opacity: 0;" onchange="document.getElementById('textfield2').value=this.value;"/>
+                <!--input type="submit" class='btn btn-default'/-->    
+                </form>
+              </div>
+              <div class="col-lg-6">
+                <button id="button_new_pic" class='btn btn-default'>{$Think.lang.Submit}</button>
+              </div>
+              
+
+            </div>
+            <div style="text-align:center">
+              <a id="pic_url_file" class="new-button lightblue" target="_blank">{$Think.lang.URL File Download}</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/assets/jquery/jquery.form.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/filesaver/Blob.js"></script>
+    <!--script type="text/javascript" src="__PUBLIC__/assets/filesaver/FileSaver.js"></script-->
+    <script type="text/javascript" src="__PUBLIC__/assets/js/strings.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/error.js"></script>
+    <script src="__PUBLIC__/assets/js/Requester/uploadpic.js"></script>
+    <!--script src="__PUBLIC__/assets/js/siderbar.js"></script-->
+    <!--script type="text/javascript" src="__PUBLIC__/assets/mustache/mustache.min.js"></script>
+    <script src="__PUBLIC__/assets/js/buildjob.js"></script-->
+
+<include file="Includes/footer"/>

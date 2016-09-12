@@ -1,0 +1,40 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+  </head>
+  <body class="users">
+  <include file="Includes/nav"/>
+  <div class="container marketing pagebody">
+      <div class="container-fluid">
+    <div id="auth">
+      <div class="well">
+        <div class="heading">
+          <h3>{$Think.lang.Reset password} ({$Think.lang.title2})</h3>
+          <div class="already-have-account">{$Think.lang.Please enter your new password} 
+            <a href="{$Think.config.WEB_URL}/Index/signin" class="switch-login">{$Think.lang.Back to sign in}</a>
+          </div>
+        </div>
+        <form accept-charset="UTF-8" action="" class="authentication" id="new-user-form" method="post" novalidate="novalidate">
+          <div class="control-group password optional user_password">
+                    <label class="password optional control-label" for="user_password">{$Think.lang.Password}*</label>
+                    <div class="controls">
+                        <input class="password optional" id="user_password" name="user[password]" pattern=".{8,128}" placeholder="{$Think.lang.Password} (min. 8 characters)" size="40" type="password" onkeydown="subRSignupCheck();">
+                    </div>
+                </div>
+                <div class="control-group password optional user_password_confirmation">
+                    <label class="password optional control-label" for="user_password_confirmation">{$Think.lang.Confirm Password}*</label>
+                    <div class="controls">
+                        <input class="password optional" id="user_password_confirmation" name="user[password_confirmation]" pattern=".{8,128}" placeholder="{$Think.lang.Confirm Password}" size="40" type="password" onkeydown="subRSignupCheck();">
+                    </div>
+                </div>
+          <div class="form-actions">
+            <input id="add-new-password" class="btn btn-primary" name="commit" value={$Think.lang.Reset}>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+    <include file="Includes/bottom"/>
+    </div>
+        <script type="text/javascript" src="__PUBLIC__/assets/js/index.js"></script>
+<include file="Includes/footer"/>
+

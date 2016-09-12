@@ -1,0 +1,264 @@
+<include file="Includes/header" />
+<!-- Some additional css -->
+    <!-- <link href="__PUBLIC__/assets/profile/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="__PUBLIC__/assets/profile/css/highlight.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/profile/css/profile.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/profile/css/jquery-ui.css">
+    <link href="__PUBLIC__/assets/profile/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+</head>
+<body onload="init()" role="document">
+	<include file="Includes/nav" />
+      <div class="container">
+        <div class="starter-template">
+         <div class="row">
+          <div class="col-md-2">
+            
+          </div>
+          <div class="col-md-8">
+            <div class="tabbable" id="tabs-284966">
+              <ul class="nav nav-tabs nav-location">
+                <li class="active">
+                  <a href="#panel-account" data-toggle="tab">{$Think.lang.Account Settings}</a>
+                </li>
+                <li>
+                  <a href="#panel-personalinfo" data-toggle="tab">{$Think.lang.Personal Info}</a>
+                </li>
+                <li>
+                  <a href="#panel-otherinfo" data-toggle="tab">{$Think.lang.Other Info}</a>
+                </li>
+                <li>
+                  <a href="#panel-money" data-toggle="tab">{$Think.lang.Money}</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                  <div class="tab-pane active" id="panel-account">
+                    <form class="form-horizontal form-style" role="form">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">{$Think.lang.Account}</label>
+                        <div name="account" class="col-sm-9">
+                          <label id="account"></label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">{$Think.lang.Old Password}</label>
+                        <div class="col-sm-9">
+                          <input type="password" class="form-control" id="old-password" placeholder="{$Think.lang.Password}">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">{$Think.lang.New Password}</label>
+                        <div class="col-sm-9">
+                          <input type="password" class="form-control" id="new-password" placeholder="{$Think.lang.Password}">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">{$Think.lang.Confirm Password}</label>
+                        <div class="col-sm-9">
+                          <input type="password" class="form-control" id="confirm-password" placeholder="{$Think.lang.Password}">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button id="account-save-button" type="button" class="btn btn-default">{$Think.lang.Save}</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane" id="panel-personalinfo">
+                    <form class="form-horizontal form-style" role="form">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">{$Think.lang.Sex}</label>
+                        <div class="col-sm-9">
+                          <div class="btn-group" data-toggle="buttons">
+                            <label name="Male" class="btn btn-default active">
+                              <input type="radio" name="sex" id="option2" value="m" autocomplete="off"> {$Think.lang.Male}
+                            </label>
+                            <label name="Female" class="btn btn-default">
+                              <input type="radio" name="sex" id="option3" value="f" autocomplete="off" checked="checked"> {$Think.lang.Female}
+                            </label>
+                          </div>
+                        </div>  
+                      </div>
+                      <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">{$Think.lang.Email}</label>
+                        <div name="email" class="col-sm-9">
+                          <input type="text" class="form-control" id="email" placeholder="{$Think.lang.Email}">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">{$Think.lang.Phone}</label>
+                        <div class="col-sm-9" name="telephone">
+                          <input type="text" class="form-control" id="telephone" placeholder="{$Think.lang.Phone}">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="dtp_input2" class="control-label col-sm-3">{$Think.lang.Birthday}</label>
+                        <div class="col-sm-9">
+                          <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input id="birthday" class="form-control" type="text" readonly>
+                            <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                          </div>
+                          <input type="hidden" id="dtp_input2" value="" /><br/>  
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="button" id="perinfo-save-button" class="btn btn-default">{$Think.lang.Save}</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane" id="panel-otherinfo">
+                    <form class="form-horizontal form-style" role="form">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">{$Think.lang.Country}</label>
+                        <div class="col-sm-9" name="country">
+                          <input id="country" name="country" class="form-control"/>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">{$Think.lang.University}</label>
+                        <div class="col-sm-9" name="university">
+                         <input id="university" name="university" class="form-control"/>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">{$Think.lang.Degree}</label>
+                        <div class="col-sm-9" name="degree">
+                          <select name="degree" id="degree" class="form-control">
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">{$Think.lang.Occupation}</label>
+                        <div class="col-sm-9" name="profession">
+                          <select name="occupation" id="occupation" class="form-control">
+                          </select>
+                        </div>
+                      </div>
+                      <!-- Not supported in API -->
+                      <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">{$Think.lang.Language}
+                        </label>
+                        <div id="language-first-column" class="col-sm-3 align-left">
+                          <label id="first-language" class="checkbox-inline margin-left-10">
+                            <input type="checkbox" name="language" value="Russian"> {$Think.lang.Russian}&nbsp; &nbsp; 
+                          </label>
+                        </div>
+                        <div id="language-second-column" class="col-sm-3 align-left">
+                        </div>
+                        <div id="language-third-column" class="col-sm-3 align-left">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">{$Think.lang.Interest Category}
+                        </label>
+                        <div id='interest-first-column' class="col-sm-3 align-left">
+                          <label id="first-interest"class="checkbox-inline margin-left-10">
+                            <input type="checkbox" id="first-tag" name="language" value="Arabic"> {$Think.lang.Arabic}
+                          </label>
+                        </div>
+                        <div id='interest-second-column' class="col-sm-3 align-left">
+                        </div>
+                        <div id='interest-third-column' class="col-sm-3 align-left">
+                        </div>
+                      </div>
+
+                      <!-- Not supported in API -->
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="button" id="otherinfo-save-button" class="btn btn-default">{$Think.lang.Save}</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane" id="panel-money">
+                    <form class="form-horizontal form-style" role="form">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">{$Think.lang.My Money}</label>
+                        <div name="mymoney" class="col-sm-9">
+                          <label id="mymoney"></label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">{$Think.lang.Recharge}</label>
+                        <div class="col-sm-9">
+                          <label style="color:red;">充值系统故障，请您向支付宝账户chinacrowds@163.com转账，转账成功后将用户名和金额发送至15210588630，我们将在当天为您充值。给你带来的不便请您谅解！</label>
+                        </div>
+                      </div>
+                    </form>
+                    <form class="form-horizontal form-style" role="form">
+                      <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">{$Think.lang.Alipay Name}</label>
+                        <div class="col-sm-9" name="alipay_name">
+                          <input type="text" class="form-control" id="alipay_name" placeholder="{$Think.lang.Alipay Name}">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">{$Think.lang.Alipay Email}</label>
+                        <div class="col-sm-9" name="alipay_account">
+                          <input type="text" class="form-control" id="alipay_account" placeholder="{$Think.lang.Alipay Email}">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">{$Think.lang.Withdraw}</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="withdrawmoney" placeholder="{$Think.lang.Withdraw}">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button id="withdraw-button" type="button" class="btn btn-default">{$Think.lang.Withdraw}</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            
+          </div>
+        </div>
+      </div>
+		<include file="Includes/bottom" />
+	</div>
+	<!-- /.container -->
+	<!-- Some additional javascript -->
+	<!-- <script type="text/javascript" src="__PUBLIC__/assets/profile/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/profile/js/bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="__PUBLIC__/assets/profile/js/profile.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/profile/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/profile/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script src="__PUBLIC__/assets/profile/js/highlight.js"></script>
+    <script src="__PUBLIC__/assets/profile/js/main.js"></script>
+    <script src="__PUBLIC__/assets/profile/js/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $('a[name=edit-message]').attr("onclick","change_into_input(this)");
+      $('a[name=delete-class]').attr("onclick","delete_interest_class(this)");
+      $('#add_interest_class_button').attr("onclick","add_interest_class()");
+      $('#account-save-button').attr('onclick','save_account()');
+      $('#perinfo-save-button').attr('onclick','save_personal_info()');
+      $('#otherinfo-save-button').attr('onclick','save_other_info()');
+      $('#recharge-button').attr('onclick','recharge()');
+      $('#withdraw-button').attr('onclick','withdraw_requester()');
+
+      var lang = "zh-CN";
+      if($('#lang').val() == 'en-us') lang = "en";
+      
+      $('.form_date').datetimepicker({
+    	format: 'yyyy-mm-dd',
+        language: lang,
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0,
+      });
+    </script>
+	<include file="Includes/footer" />

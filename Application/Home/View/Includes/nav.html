@@ -1,0 +1,147 @@
+<link href="../../../../Public/assets/bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+<link href="../../../../Public/assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+<div class="navbar-wrapper">
+     <!-- <div class="container">-->
+
+        <nav class="navbar navbar-default" style="height:60px;">
+          <div class="container">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	          <span class="sr-only">{$Think.lang.Navigation}</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+              <a class="navbar-brand" style="color:#333;font-size:40px;" href="#">{$Think.lang.ChinaCrowds}</a>
+            </div>
+            
+            <input type="hidden" id="lang" value="{$Think.lang.lang}"/>
+            <if condition="$_SESSION['requester_username'] != ''">
+            <input type="hidden" id="requester_id" value="{$_SESSION['requester_id']}"/>
+            <input type="hidden" id="usertype" value="requester"/>
+            <input type="hidden" id="requester_token" value="{$_SESSION['requester_token']}"/>
+            <div id="navbar" class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav navbar-right">
+	          	<if condition="$_SESSION['requester_userstatus'] == '1'">
+	          	<li>
+	          		<!--<form action="{$Think.config.WEB_URL}/Task/Search" method="post" class="navbar-form navbar-right">-->
+	          		<!--<form action="{$Think.config.WEB_URL}/Requester/index/page/{$_SESSION['current_page']}/ordering/{$_SESSION['current_ordering']}/tags={$_SESSION['current_tags']}&search={$_SESSION['current_content']}" method="post" class="navbar-form navbar-right">-->
+					<form action="javascript:requester_search()" method="post" class="navbar-form navbar-right">
+	          			<input type="text" class="form-control" name="search_content" id="search_content" placeholder="{$Think.lang.Search}...">
+	        		</form>
+	        	</li>
+	        	<li><a href="{$Think.config.WEB_URL}">{$Think.lang.Task List}</a></li>
+	            <li><a href="{$Think.config.WEB_URL}/Requester/Dashboard">{$Think.lang.Dashboard}</a></li>
+	        	</if>
+	            <li><a href="{$Think.config.WEB_URL}/Requester/Profile">{$Think.lang.Profile}({$_SESSION['requester_username']})</a></li>
+	            <li><a href="{$Think.config.WEB_URL}/Index/switchuser">{$Think.lang.Switch User}</a></li>
+	            <li><a href="{$Think.config.WEB_URL}/Index/dologout">{$Think.lang.Logout}</a></li>
+	            <li><a href="{$Think.config.WEB_URL}/Index/api">{$Think.lang.API}</a></li>
+	            <li><a href="{$Think.config.WEB_URL}/Index/help">{$Think.lang.Help}</a></li>
+	            <li>
+					<eq name="Think.lang.lang" value="en-us">
+        				<!-- <a class="lang" href="?l=zh-cn" name="zh-cn">中文</a> -->
+        				<a class="lang" onclick="change_zh_cn()" name="zh-cn" style="cursor:pointer;">中文</a>
+        			</eq>
+        			<eq name="Think.lang.lang" value="zh-cn">
+        				<!-- <a class="lang" href="?l=en-us" name="en-us">English</a> -->
+        				<a class="lang" onclick="change_en_us()" name="en-us" style="cursor:pointer;">English</a>
+        			</eq>
+        		</li>
+	          </ul>
+	        </div>
+	        </if>
+	        			
+			<if condition="$_SESSION['worker_username'] != ''">
+            <input type="hidden" id="worker_id" value="{$_SESSION['worker_id']}"/>
+            <input type="hidden" id="usertype" value="worker"/>
+            <input type="hidden" id="worker_token" value="{$_SESSION['worker_token']}"/>
+            <div id="navbar" class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav navbar-right">
+	          	<if condition="$_SESSION['worker_userstatus'] == '1'">
+	          	<li>
+	          		<!--<form action="{$Think.config.WEB_URL}/Task/Search" method="post" class="navbar-form navbar-right">-->
+	          		<!--<form action="{$Think.config.WEB_URL}/Worker/index?page={$_SESSION['current_page']}&ordering={$_SESSION['current_ordering']}&tags={$_SESSION['current_tags']}&search={$_SESSION['current_content']}" method="post" class="navbar-form navbar-right">-->
+	          		<form action="javascript:worker_search()" method="post" class="navbar-form navbar-right">
+	          			<input type="text" class="form-control" name="search_content" id="search_content" placeholder="{$Think.lang.Press Enter to}{$Think.lang.Search}...">
+	        		</form>
+	        	</li>
+	        	<li><a href="{$Think.config.WEB_URL}">{$Think.lang.Task List}</a></li>
+	            <li><a href="{$Think.config.WEB_URL}/Worker/Dashboard">{$Think.lang.Dashboard}</a></li>
+	        </if>
+	            <li><a href="{$Think.config.WEB_URL}/Worker/Profile">{$Think.lang.Profile}({$_SESSION['worker_username']})</a></li>
+	            <li><a href="{$Think.config.WEB_URL}/Index/switchuser">{$Think.lang.Switch User}</a></li>
+	            <li><a href="{$Think.config.WEB_URL}/Index/dologout">{$Think.lang.Logout}</a></li>
+	            <li><a href="{$Think.config.WEB_URL}/Index/api">{$Think.lang.API}</a></li>
+	            <li><a href="{$Think.config.WEB_URL}/Index/help">{$Think.lang.Help}</a></li>
+				<li>
+					<eq name="Think.lang.lang" value="en-us">
+        				<!-- <a class="lang" href="?l=zh-cn" name="zh-cn">中文</a> -->
+        				<a class="lang" onclick="change_zh_cn()" name="zh-cn" style="cursor:pointer;">中文</a>
+        			</eq>
+        			<eq name="Think.lang.lang" value="zh-cn">
+        				<!-- <a class="lang" href="?l=en-us" name="en-us">English</a> -->
+        				<a class="lang" onclick="change_en_us()" name="en-us" style="cursor:pointer;">English</a>
+        			</eq>
+        		</li>	          
+       		  </ul>
+	        </div>
+
+	        </if>
+	        
+	        <if condition="$_SESSION['requester_username'] == '' && $_SESSION['worker_username'] == ''">
+			
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="{$Think.config.WEB_URL}">{$Think.lang.Home}</a></li>
+                <li><a href="{$Think.config.WEB_URL}/Index/aboutus">{$Think.lang.AboutUs}</a></li>
+                <li><a href="{$Think.config.WEB_URL}/Index/contactus">{$Think.lang.ContactUs}</a></li>
+                <li><a href="{$Think.config.WEB_URL}/Index/api">{$Think.lang.API}</a></li>
+                <li><a href="{$Think.config.WEB_URL}/Index/help">{$Think.lang.Help}</a></li>
+              </ul>
+              <ul class="nav navbar-nav pull-right">
+                <li><a href="{$Think.config.WEB_URL}/Index/signin">{$Think.lang.SIGNIN}</a></li>
+                <li><a href="{$Think.config.WEB_URL}/Index/signup">{$Think.lang.SIGNUP}</a></li>
+                <li>
+					<eq name="Think.lang.lang" value="en-us">
+        				<!-- <a class="lang" href="?l=zh-cn" name="zh-cn">中文</a> -->
+        				<a class="lang" onclick="change_zh_cn()" name="zh-cn" style="cursor:pointer;">中文</a>
+        			</eq>
+        			<eq name="Think.lang.lang" value="zh-cn">
+        				<!-- <a class="lang" href="?l=en-us" name="en-us">English</a> -->
+        				<a class="lang" onclick="change_en_us()" name="en-us" style="cursor:pointer;">English</a>
+        			</eq>
+        		</li>
+              </ul>
+            </div>
+            
+            </if>
+            
+          </div>
+       <!-- </nav>-->
+
+      </div>
+    </div>
+<script type="text/javascript" src="__PUBLIC__/assets/js/strings.js"></script>
+<script type="text/javascript">
+function requester_search() {
+	var search;
+	if($('#search_content').val() == '') {
+		search = "{$current_search}";
+	}
+	else {
+		search = $('#search_content').val();
+	}
+	location.href = "{$Think.config.WEB_URL}/Requester/index?search="+search;
+}
+function worker_search() {
+	var search;
+	if($('#search_content').val() == '') {
+		search = "{$current_search}";
+	}
+	else {
+		search = $('#search_content').val();
+	}
+	location.href = "{$Think.config.WEB_URL}/Worker/index?search="+search;
+}
+</script>

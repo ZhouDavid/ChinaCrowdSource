@@ -1,0 +1,365 @@
+<html>
+<head>
+<link href="__PUBLIC__/assets/css/frame.css" rel="stylesheet">
+<link href="__PUBLIC__/assets/jstree/themes/default/style.min.css" rel="stylesheet">
+<script type="text/javascript" src="__PUBLIC__/assets/jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/assets/jstree/jstree.js"></script>
+<script type="text/javascript" src="__PUBLIC__/assets/mustache/mustache.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/assets/js/common.js"></script>
+<script type="text/javascript" src="__PUBLIC__/assets/js/error.js"></script>
+<script type="text/javascript">
+		
+		$.post(web_url+'/Requester/getjobstatus', {}, 
+		function(data, status) {
+			if (status=="success")
+			{
+				if (data['status']=="init")
+				{
+					alert("you need to build your task!");
+					//window.location.href = web_url + "/Requester/build_job";
+				}
+				else if (data['status']=="option")
+				{
+					alert("you need to upload data!");
+					//window.location.href = web_url+ "/Requester/upload_data";
+				}
+				else
+				{
+
+					$.post(web_url + "/Requester/truepreviewall/",{},
+						function(data, status){
+							if (status=="success")
+							{
+								if (data["true"]!=null&&data["true"]["code"]==0&&data.hasOwnProperty("template_id"))
+								{
+
+									var templates = {};
+									var template_json = null;
+
+									if (data["template_id"]=='7')
+									{
+										template_json = {code: 0, result: {questionRadio: "<div class=\"question\">\n<div>{{description}}</div>\n    {{#options}}\n        <div><label><input type=\"radio\" name=\"{{name}}\" value=\"{{.}}\"/>{{.}}</label></div>\n    {{/options}}\n</div>\n", questionText: "<div class=\"question\">\n    <div>{{description}}</div>\n    <div><input type=\"text\" name=\"{{name}}\"/></div>\n</div>\n", "unit": "<div class=\"unit\">\n<div>{{description}}</div>\n    {{#questions}}\n        {{#type-classification}}\n            {{> questionClassification}}\n        {{/type-classification}}\n        {{#type-radio}}\n            {{> questionRadio}}\n        {{/type-radio}}\n        {{#type-checkbox}}\n            {{> questionCheckBox}}\n        {{/type-checkbox}}\n        {{#type-input}}\n            {{> questionText}}\n        {{/type-input}}\n    {{/questions}}\n</div>\n", questionCheckBox: "<div class=\"question\">\n<div>{{description}}</div>\n    {{#options}}\n        <div><label><input type=\"checkbox\" name=\"{{name}}\" value=\"{{.}}\"/>{{.}}</label></div>\n    {{/options}}\n</div>\n", questionClassification: "<div class=\"question classification\" name=\"{{name}}\">\n</div>"}};
+									}
+									else
+									{
+										template_json = {code: 0, result: {questionRadio: "<div class=\"question\">\n<div>{{description}}</div>\n    {{#options}}\n        <div><label><input type=\"radio\" name=\"{{name}}\" value=\"{{.}}\"/>{{.}}</label></div>\n    {{/options}}\n</div>\n", questionText: "<div class=\"question\">\n    <div>{{description}}</div>\n    <div><input type=\"text\" name=\"{{name}}\"/></div>\n</div>\n", "unit": "<div class=\"unit\">\n<div>{{description}}</div>\n    {{#questions}}\n        {{#type-radio}}\n            {{> questionRadio}}\n        {{/type-radio}}\n        {{#type-checkbox}}\n            {{> questionCheckBox}}\n        {{/type-checkbox}}\n        {{#type-input}}\n            {{> questionText}}\n        {{/type-input}}\n    {{/questions}}\n</div>\n", questionCheckBox: "<div class=\"question\">\n<div>{{description}}</div>\n    {{#options}}\n        <div><label><input type=\"checkbox\" name=\"{{name}}\" value=\"{{.}}\"/>{{.}}</label></div>\n    {{/options}}\n</div>\n"}};
+									}
+
+									//var template_json = {code: 0, result: {questionRadio: "<div class=\"question\">\n<div>{{description}}</div>\n    {{#options}}\n        <div><label><input type=\"radio\" name=\"{{name}}\" value=\"{{.}}\"/>{{.}}</label></div>\n    {{/options}}\n</div>\n", questionText: "<div class=\"question\">\n    <div>{{description}}</div>\n    <div><input type=\"text\" name=\"{{name}}\"/></div>\n</div>\n", "unit": "<div class=\"unit\">\n<div>{{description}}</div>\n    {{#questions}}\n        {{#type-radio}}\n            {{> questionRadio}}\n        {{/type-radio}}\n        {{#type-checkbox}}\n            {{> questionCheckBox}}\n        {{/type-checkbox}}\n        {{#type-input}}\n            {{> questionText}}\n        {{/type-input}}\n    {{/questions}}\n</div>\n", questionCheckBox: "<div class=\"question\">\n<div>{{description}}</div>\n    {{#options}}\n        <div><label><input type=\"checkbox\" name=\"{{name}}\" value=\"{{.}}\"/>{{.}}</label></div>\n    {{/options}}\n</div>\n"}};
+
+									var render_unit = function(json) {
+										return Mustache.render(templates.unit, json, templates);
+									};
+
+									var render_units = function(json_array) {
+										return $.map(json_array, function(item) {
+										// use the first unit's question description since usually all the units share the same question structure
+										item.questions = item.questions || json_array[0].questions;
+										return render_unit(item);
+										});
+									};
+
+								$.each(template_json["result"], function(k, v) {
+									Mustache.parse(v);
+									templates[k] = v;
+								});
+								//console.log(data["templates"]["result"]);
+								//alert(data["true"]);
+
+								var des = new Array();
+								if (data.hasOwnProperty("template_id"))
+								{
+									var len = data["true"]["result"].length;
+									for (var i = 0; i < len; i++)
+									{
+										var url = data["true"]["result"][i]["description"];
+										des.push(url);
+										var urlt = "";
+										if (data["template_id"]=='3')
+										{
+											var pic1s = url.indexOf("url@");
+											urlt += url.substring(0, pic1s);
+											pic1s = pic1s+4;
+											var pic1e = url.indexOf("@", pic1s);
+											urlt += "1";
+											urlt += url.substring(pic1e+1);
+											//alert(urlt);
+											data["true"]["result"][i]["description"] = urlt;
+										}
+										else if (data["template_id"]=='4')
+										{
+											var start_url = 0;
+											var pic_s = 0;
+											var pic_e = 0;
+											var count = 1;
+											while (url.indexOf("url@", start_url)>=0)
+											{
+												pic_s = url.indexOf("url@", start_url);
+												urlt += url.substring(start_url, pic_s);
+												pic_s = pic_s + 4;
+												pic_e = url.indexOf("@", pic_s);
+												urlt += count;
+												//alert(urlt);
+												start_url = pic_e + 1;
+												count++;
+											}
+											urlt += url.substring(pic_e+1);
+											data["true"]["result"][i]["description"] = urlt;
+										}
+										else if (data["template_id"]=='5')
+								{
+									var pic1s = url.indexOf("web@crowdbao");
+									urlt += url.substring(0, pic1s);
+									pic1s = pic1s+12;
+									var pic1e = url.indexOf("crowdbao@", pic1s);
+									urlt += "1";
+									urlt += url.substring(pic1e+9);
+									//alert(urlt);
+									data["true"]["result"][i]["description"] = urlt;
+								}
+								else if (data["template_id"]=='6')
+								{
+									var start_url = 0;
+									var pic_s = 0;
+									var pic_e = 0;
+									var count = 1;
+									while (url.indexOf("web@crowdbao", start_url)>=0)
+									{
+										pic_s = url.indexOf("web@crowdbao", start_url);
+										urlt += url.substring(start_url, pic_s);
+										pic_s = pic_s + 12;
+										pic_e = url.indexOf("crowdbao@", pic_s);
+										urlt += count;
+										//alert(urlt);
+										start_url = pic_e + 9;
+										count++;
+									}
+									urlt += url.substring(pic_e+9);
+									data["true"]["result"][i]["description"] = urlt;
+								}
+									}
+								}
+
+								$("body").append(render_units(data["true"]["result"]));
+								$(".unit div:first-child").each(function(){
+									$(this)[0].innerHTML = $(this).text();
+									$(this)[0].innerHTML = $(this)[0].innerText;
+								});
+						
+								var len = data["true"]["result"].length;
+								for (var i = 0; i < len; i++)
+								{
+									data["true"]["result"][i]["description"] = des[i];	
+								}
+
+								if (data.hasOwnProperty("template_id"))
+								{
+									var len = data["true"]["result"].length;
+									var api = api_url+"/photoes/?photo_url=";
+									for (var i = 0; i < len; i++)
+									{
+										var url = data["true"]["result"][i]["description"];
+										var urlt = "";
+										if (data["template_id"]=='3')
+										{
+											var pic1s = url.indexOf("@");
+											pic1s = pic1s+1;
+											var pic1e = url.indexOf("@", pic1s);
+											urlt = url.substring(pic1s, pic1e);
+
+											var start = urlt.substring(0, 5);
+											var path = "";
+											if (start=="tasks") {
+												//alert(urlt);
+												path = api+urlt+"&width=200&token="+data["token"];
+											}
+											else {
+												path = urlt;
+											}
+											$("body").children().eq(i).prepend("<img src=/>");
+											$("body").children().eq(i).children(":first").attr('src', path);
+										}
+										else if (data["template_id"]=='4')
+										{
+
+											var start_url = 0;
+											var pic_s = 0;
+											var pic_e = 0;
+											var urls = new Array();
+											while (url.indexOf("@", start_url)>=0)
+											{
+												pic_s = url.indexOf("@", start_url);
+												pic_s = pic_s + 1;
+												pic_e = url.indexOf("@", pic_s);
+												urls.push(url.substring(pic_s, pic_e));
+												start_url = pic_e + 1;
+											}
+
+											var len_urls = urls.length;
+											for (var j = len_urls-1; j >= 0; j--)
+											{
+												var urlt = urls[j];
+												var start = urlt.substring(0, 5);
+												var path = "";
+												if (start=="tasks") {
+													//alert(urlt);
+													path = api+urlt+"&width=200&token="+data["token"];
+												}
+												else {
+													path = urlt;
+												}
+												//var path = api+urlt+"&width=200&token="+data["token"];
+												$("body").children().eq(i).prepend("<img src=/>");
+												$("body").children().eq(i).children(":first").attr('src', path);
+											}
+
+										}
+
+										if (data["template_id"]=='5')
+								{
+									var pic1s = url.indexOf("web@crowdbao");
+									pic1s = pic1s+12;
+									var pic1e = url.indexOf("crowdbao@", pic1s);
+									urlt = url.substring(pic1s, pic1e);
+
+									var start = urlt.substring(0, 3);
+									var path = "";
+									if (start == "url") { // 外联网址
+										path = urlt.substring(3, urlt.length);
+										console.log(path);
+										var frameid = 'frame' + Math.random(); 
+										$("body").children().eq(i).prepend('<iframe id="'+frameid+'" src="'+path+'" frameborder="1" scrolling="auto" width="100%" style="border:solid 1px;"></iframe>');
+									} 
+									else { // 服务器上网页内容
+										path = urlt;
+										var frameid = 'frame' + Math.random(); 
+										$("body").children().eq(i).prepend('<iframe id="'+frameid+'" frameborder="1" scrolling="auto" width="100%" style="border:solid 1px;"></iframe>'); 
+										$(document.getElementById(frameid).contentWindow.document.body).html(path);
+									}
+
+									//$("body").children().eq(i).prepend("<iframe src=></iframe>");
+									//$("body").children().eq(i).children(":first")[0].contentWindow.document.writeln(urlt);
+
+								
+								}
+								else if (data["template_id"]=='6')
+								{
+
+									var start_url = 0;
+									var pic_s = 0;
+									var pic_e = 0;
+									var urls = new Array();
+									while (url.indexOf("@", start_url)>=0)
+									{
+										pic_s = url.indexOf("web@crowdbao", start_url);
+										pic_s = pic_s + 12;
+										pic_e = url.indexOf("crowdbao@", pic_s);
+										urls.push(url.substring(pic_s, pic_e));
+										start_url = pic_e + 9;
+									}
+
+									var len_urls = urls.length;
+									for (var j = len_urls-1; j >= 0; j--)
+									{
+										var urlt = urls[j];
+
+										var start = urlt.substring(0, 3);
+										var path = "";
+										if (start == "url") { // 外联网址
+											path = urlt.substring(3, urlt.length);
+											console.log(path);
+											var frameid = 'frame' + Math.random(); 
+											$("body").children().eq(i).prepend('<iframe id="'+frameid+'" src="'+path+'" frameborder="1" scrolling="auto" width="100%" style="border:solid 1px;"></iframe>');
+										} 
+										else { // 服务器上网页内容
+											path = urlt;
+											var frameid = 'frame' + Math.random(); 
+											$("body").children().eq(i).prepend('<iframe id="'+frameid+'" frameborder="1" scrolling="auto" width="100%" style="border:solid 1px;"></iframe>'); 
+											$(document.getElementById(frameid).contentWindow.document.body).html(path);
+										}
+										//$("body").children().eq(i).prepend("<iframe src=></iframe>");
+										//$("body").children().eq(i).children(":first")[0].contentWindow.document.writeln(urlt);
+										
+									}
+
+								}
+								else if (data["template_id"]=='7')
+								{
+									//$("body").children().eq(i).children().eq(0).after("<div class='question'></div>");
+									$("body").children().eq(i).children().eq(1).jstree({
+    									'core' : {
+											'data' : {
+												"url" : "__PUBLIC__/assets/json/root.json",
+												"dataType" : "json"
+											}
+    									}
+  									});
+  									$("body").children().eq(i).children().eq(1).on("click.jstree", function (e, data) {
+    									//console.log("The selected nodes are:");
+    									//console.log(data.selected);
+    									var instance = $(this).jstree(true);
+    									//var nodearr = instance.get_selected(true);
+    									instance.toggle_node(e.target);
+
+									});
+								}
+								
+									}
+								}
+							}
+							else if (data["true"]==null)
+							{
+								alert("your data is empty!Please upload again!");
+
+							}
+							else
+							{
+								//error(data["templates"]["code"]);
+								//error(data["true"]["code"]);
+								var code1 = data["true"]["code"];
+								if (code1==3)
+								{
+									alert("invalid token, please login");
+								}
+								if (code1==10)
+								{
+									alert("invalid token, please login");
+								}
+								if (code1==1300)
+								{
+									alert("upload file format error");
+								}
+								if (code1==1309)
+								{
+									alert("wrong task status");
+								}
+								if (code1==1312)
+								{
+									alert("no units!");
+								}
+								if (code1==1400)
+								{
+									alert("not a zip file.");
+								}
+								if (code1==1401)
+								{
+									alert("invalid zip file, maybe it contains invalid image, only allow .jpg, .png, jpeg.");
+								}
+								if (code1==1500)
+								{
+									alert("the request image doesn't exist on server.");
+								}
+							}
+						}
+					});
+					
+				}
+			}
+		});
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

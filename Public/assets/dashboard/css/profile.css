@@ -1,0 +1,44 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.align-left{
+	text-align: left;
+}
+
+.align-right{
+	text-align: right;
+}
+
+.align-center{
+	text-align: center;
+}
+
+.form-style{
+	padding-top: 20px;
+}
+
+.modal-body{
+	height: 120px;
+	line-height: 90px;
+}
+
+.checkbox-inline{
+	margin: 0 20px;
+}
+
+.margin-left-10{
+	margin-left: 10px;
+}
+
+.padding-top-7{
+	padding-top: 7px;
+}
+
+.col-sm-9 .table{
+	margin-top: 20px;
+}

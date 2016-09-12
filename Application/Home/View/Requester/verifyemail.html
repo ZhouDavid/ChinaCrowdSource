@@ -1,0 +1,32 @@
+<include file="Includes/header" />
+<!-- Some additional css -->
+    <!-- <link href="__PUBLIC__/assets/profile/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="__PUBLIC__/assets/profile/css/highlight.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/profile/css/profile.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/profile/css/jquery-ui.css">
+    <link href="__PUBLIC__/assets/profile/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+</head>
+<body role="document">
+	<include file="Includes/nav" />
+      <div class="container">
+        <div class="starter-template">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <h2><span style="color: #444444;">{$Think.lang.You haven't verify your email, please verify your email and you will enjoy the website}</span></h2>
+            <div class="margin-20"></div>
+            <div class="form-actions">
+              <input id="verify-email-button-requester" class="btn btn-primary" name="commit" value="{$Think.lang.Verify Now!}"></input> 
+            </div>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+        </div>
+		<include file="Includes/bottom" />
+	</div>
+  <script type="text/javascript" src="__PUBLIC__/assets/js/Requester/index.js"></script>
+	<!-- /.container -->
+	<!-- Some additional javascript -->
+	<!-- <script type="text/javascript" src="__PUBLIC__/assets/profile/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/profile/js/bootstrap.min.js"></script> -->
+	<include file="Includes/footer" />

@@ -1,0 +1,126 @@
+<body role="document">
+<include file="Includes/header"/>
+<!-- Some additional css -->
+<link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+</head>  
+<body role="document">
+<include file="Includes/nav"/>
+
+    <div class="container marketing pagebody">
+        <div class="row">
+          <h2><span style="color: #444444;">{$Think.lang.Who are you signing up as?}</span></h2>
+          <div class="col-lg-6">
+            <h2><span style="color: #254467;">{$Think.lang.Requester Sign Up}</span></h2>
+            <div id="auth">
+            <div class="well">
+            <div class="heading">
+                <h3>{$Think.lang.Requester Sign Up}</h3>
+                <div class="already-have-account">{$Think.lang.Already have an account?}
+                    <a href="{$Think.config.WEB_URL}/Index/signin" class="switch-login">{$Think.lang.Sign In}</a>
+                </div>
+            </div>
+            <div class="authentication" id="new-requester-form">
+                <div class="control-group string optional user_name">
+                    <label class="string optional control-label" for="user_name">{$Think.lang.User Name}*</label>
+                    <div class="controls">
+                        <input class="string optional" id="user_name_requester" name="user[name]" placeholder="{$Think.lang.User Name}" size="40" type="text" onkeydown="subRSignupCheck();">
+                    </div>
+                </div>
+                <div class="control-group email optional user_email">
+                    <label class="email optional control-label" for="user_email">{$Think.lang.Email}*</label>
+                    <div class="controls">
+                        <input autocomplete="off" class="string email optional" id="user_email_requester" name="user[email]" placeholder="{$Think.lang.Email}" size="40" type="email" onkeydown="subRSignupCheck();">
+                    </div>
+                </div>
+                <div class="control-group password optional user_password">
+                    <label class="password optional control-label" for="user_password">{$Think.lang.Password}*</label>
+                    <div class="controls">
+                        <input class="password optional" id="user_password_requester" name="user[password]" pattern=".{8,128}" placeholder="{$Think.lang.Password} (min. 8 characters)" size="40" type="password" onkeydown="subRSignupCheck();">
+                    </div>
+                </div>
+                <div class="control-group password optional user_password_confirmation">
+                    <label class="password optional control-label" for="user_password_confirmation">{$Think.lang.Confirm Password}*</label>
+                    <div class="controls">
+                        <input class="password optional" id="user_password_confirmation_requester" name="user[password_confirmation]" pattern=".{8,128}" placeholder="{$Think.lang.Confirm Password}" size="40" type="password" onkeydown="subRSignupCheck();">
+                    </div>
+                </div>
+                <!--<div class="control-group string optional user_phone_number">
+                    <label class="string optional control-label" for="user_phone_number">{$Think.lang.Phone}</label>
+                    <div class="controls">
+                        <input class="string optional" id="user_phone_number_requester" name="user[phone_number]" placeholder="{$Think.lang.Phone} ({$Think.lang.Optional})" size="40" type="text">
+                    </div>
+                </div>
+                <div class="control-group string optional user_title">
+                    <label class="string optional control-label" for="user_title">{$Think.lang.Title}</label>
+                    <div class="controls">
+                        <input class="string optional" id="user_title_requester" name="user[title]" placeholder="{$Think.lang.Title} ({$Think.lang.Optional})" size="40" type="text">
+                    </div>
+                </div>-->
+                <div class="form-actions">
+                    <button class="btn btn-primary" name="commit" id="requester_signup" value="Start Free Trial">{$Think.lang.Start Free Trial}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+          <div class="col-lg-6">
+            <h2><span style="color: #00ab4d;">{$Think.lang.Worker Sign Up}</span></h2>
+            <div id="auth">
+            <div class="well">
+            <div class="heading">
+                <h3>{$Think.lang.Worker Sign Up}</h3>
+                <div class="already-have-account">{$Think.lang.Already have an account?}
+                    <a href="{$Think.config.WEB_URL}/Index/signin" class="switch-login">{$Think.lang.Sign In}</a>
+                </div>
+            </div>
+            <div class="authentication" id="new-worker-form">
+                <div class="control-group string optional user_name">
+                    <label class="string optional control-label" for="user_name">{$Think.lang.User Name}*</label>
+                    <div class="controls">
+                        <input class="string optional" id="user_name_worker" name="user[name]" placeholder="{$Think.lang.User Name}" size="40" type="text" onkeydown="subWSignupCheck();">
+                    </div>
+                </div>
+                <div class="control-group email optional user_email">
+                    <label class="email optional control-label" for="user_email">{$Think.lang.Email}*</label>
+                    <div class="controls">
+                        <input autocomplete="off" class="string email optional" id="user_email_worker" name="user[email]" placeholder="{$Think.lang.Email}" size="40" type="email" onkeydown="subWSignupCheck();">
+                    </div>
+                </div>
+                <div class="control-group password optional user_password">
+                    <label class="password optional control-label" for="user_password">{$Think.lang.Password}*</label>
+                    <div class="controls">
+                        <input class="password optional" id="user_password_worker" name="user[password]" pattern=".{8,128}" placeholder="{$Think.lang.Password} (min. 8 characters)" size="40" type="password" onkeydown="subWSignupCheck();">
+                    </div>
+                </div>
+                <div class="control-group password optional user_password_confirmation">
+                    <label class="password optional control-label" for="user_password_confirmation">{$Think.lang.Confirm Password}*</label>
+                    <div class="controls">
+                        <input class="password optional" id="user_password_confirmation_worker" name="user[password_confirmation]" pattern=".{8,128}" placeholder="{$Think.lang.Confirm Password}" size="40" type="password" onkeydown="subWSignupCheck();">
+                    </div>
+                </div>
+                <!--<div class="control-group string optional user_phone_number">
+                    <label class="string optional control-label" for="user_phone_number">{$Think.lang.Phone}</label>
+                    <div class="controls">
+                        <input class="string optional" id="user_phone_number_worker" name="user[phone_number]" placeholder="{$Think.lang.Phone} ({$Think.lang.Optional})" size="40" type="text">
+                    </div>
+                </div>
+                <div class="control-group string optional user_title">
+                    <label class="string optional control-label" for="user_title">{$Think.lang.Title}</label>
+                    <div class="controls">
+                        <input class="string optional" id="user_title_worker" name="user[title]" placeholder="{$Think.lang.Title} ({$Think.lang.Optional})" size="40" type="text">
+                    </div>
+                </div>-->
+                <div class="form-actions">
+                    <button class="btn btn-primary" name="commit" id="worker_signup" value="Start Free Trial">{$Think.lang.Start Free Trial}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+        </div>
+
+<include file="Includes/bottom"/>
+</div><!-- /.container -->
+<!-- Some additional javascript -->
+<script src="__PUBLIC__/assets/js/index.js"></script>
+<include file="Includes/footer"/>

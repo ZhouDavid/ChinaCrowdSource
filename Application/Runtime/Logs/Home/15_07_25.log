@@ -1,0 +1,1111 @@
+[ 2015-07-25T10:26:31+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002418s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014081s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2015-07-25T10:27:12+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002175s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2015-07-25T10:27:21+08:00 ] ::1 /?l=en-us
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2015-07-25T10:27:23+08:00 ] ::1 /?l=zh-cn
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001722s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2015-07-25T10:31:10+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001945s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014296s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014369s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2015-07-25T10:32:25+08:00 ] ::1 /?l=en-us
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002485s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013591s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000498s ]
+
+[ 2015-07-25T10:32:26+08:00 ] ::1 /?l=zh-cn
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001869s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013108s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2015-07-25T18:16:37+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001171s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008916s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020271s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001179s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001259s ]
+
+[ 2015-07-25T18:18:46+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005145s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012532s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2015-07-25T20:22:17+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002404s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000554s ]
+
+[ 2015-07-25T21:10:36+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002766s ]
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given C:\crowdbao-web\Application\Home\Model\StatModel.class.php 第 18 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014429s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2015-07-25T21:10:47+08:00 ] ::1 /index.php/Index/aboutus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002075s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013318s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2015-07-25T21:12:01+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002153s ]
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given C:\crowdbao-web\Application\Home\Model\StatModel.class.php 第 18 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016272s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000989s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004091s ]
+
+[ 2015-07-25T21:12:02+08:00 ] ::1 /index.php/Index/aboutus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001774s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010052s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000457s ]
+
+[ 2015-07-25T21:12:04+08:00 ] ::1 /index.php/Index/contactus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017401s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000798s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000855s ]
+
+[ 2015-07-25T21:12:05+08:00 ] ::1 /index.php/Index/contactus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002314s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\a42457b708fdd0044b54bb3f86952c79.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013283s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000484s ]
+
+[ 2015-07-25T21:12:07+08:00 ] ::1 /index.php/Index/help
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002216s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2015-07-25T21:12:12+08:00 ] ::1 /index.php/Index/aboutus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2015-07-25T21:12:12+08:00 ] ::1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002288s ]
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given C:\crowdbao-web\Application\Home\Model\StatModel.class.php 第 18 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001578s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001749s ]
+
+[ 2015-07-25T21:12:14+08:00 ] ::1 /index.php/Index/signin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002675s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2015-07-25T21:13:45+08:00 ] ::1 /index.php/Index/api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002896s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2015-07-25T21:13:45+08:00 ] ::1 /index.php/Index/api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001837s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000435s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000584s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017881s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017933s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000604s ]
+
+[ 2015-07-25T21:15:30+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000905s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002602s ]
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given C:\crowdbao-web\Application\Home\Model\StatModel.class.php 第 18 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014119s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000635s ]
+
+[ 2015-07-25T21:15:34+08:00 ] ::1 /index.php/Index/signup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000694s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002088s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016683s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016736s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000728s ]
+
+[ 2015-07-25T21:29:54+08:00 ] ::1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002689s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014189s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2015-07-25T21:32:08+08:00 ] ::1 /index.php/Index/signin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002321s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012572s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012614s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000551s ]
+
+[ 2015-07-25T21:32:18+08:00 ] ::1 /index.php/Index/api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002351s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014229s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014312s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2015-07-25T21:32:20+08:00 ] ::1 /index.php/Index/aboutus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002135s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010525s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2015-07-25T21:32:22+08:00 ] ::1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001808s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013533s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000629s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000682s ]
+
+[ 2015-07-25T21:32:25+08:00 ] ::1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000331s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000452s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040342s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001297s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001410s ]
+
+[ 2015-07-25T21:32:28+08:00 ] ::1 /index.php/Index/aboutus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002259s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\de80abc44714718598b250a576579ed6.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011382s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000414s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000446s ]
+
+[ 2015-07-25T21:32:29+08:00 ] ::1 /index.php/Index/help
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2730f61f2bb64d31cdd75e20f695f34c.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011861s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000484s ]
+
+[ 2015-07-25T21:32:31+08:00 ] ::1 /index.php/Index/signup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001829s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\45b93eaedd44ec43f2dffa2fe07510bc.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2015-07-25T22:45:30+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002041s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000554s ]
+
+[ 2015-07-25T22:45:40+08:00 ] ::1 /index.php/Index/signin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002107s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000375s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012157s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000559s ]
+
+[ 2015-07-25T22:47:15+08:00 ] ::1 /index.php/Index/signin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001935s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013205s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2015-07-25T23:14:41+08:00 ] ::1 /index.php/Index/api
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002179s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000469s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000525s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\81cdf33ad4ae141e9826580664280cd3.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000717s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2015-07-25T23:46:08+08:00 ] ::1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004792s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019723s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2015-07-25T23:55:46+08:00 ] ::1 /index.php/Index/signin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002410s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004441s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 54 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 82 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 110 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 110 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 140 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\73f2576f4e84e9d795430e4b7fa1d8e4.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013563s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001935s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002004s ]
+
+[ 2015-07-25T23:59:09+08:00 ] ::1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001586s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015748s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015798s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000867s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001948s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002033s ]
+
+[ 2015-07-25T23:59:15+08:00 ] ::1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001583s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 80 行.
+NOTIC: [8] Undefined index: requester_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined index: worker_username C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 108 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 138 行.
+NOTIC: [8] Undefined variable: current_search C:\crowdbao-web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 148 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014656s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+

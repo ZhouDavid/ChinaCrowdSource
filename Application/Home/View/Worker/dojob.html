@@ -1,0 +1,573 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/dashboard.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/jstree/themes/default/style.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/signin.css" rel="stylesheet">
+    <script type="text/javascript" src="__PUBLIC__/assets/jstree/jstree.js"></script>
+<style>
+    .unit {
+	border-radius: 6px;
+	background: white;
+	clear: both;
+	overflow: auto;
+	color: #414c55;
+	border: 1px #eee solid;
+	padding: 19px;
+	margin: 20px 0px 30px 0px;
+}
+
+.question {
+	cursor: pointer;
+	position: relative;
+	left: 0;
+	top: 0;
+	margin-top: 5px;
+	padding: 5px 10px 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	border-color: #ffe186!important;
+	background-color: #FFFFEC;
+}
+
+.question_des {
+	min-height: 20px;
+padding: 19px;
+margin-bottom: 20px;
+background-color: #f5f5f5;
+border: 1px solid #e3e3e3;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+    </style>
+    <script type="text/javascript" src="__PUBLIC__/assets/jquery/jquery.form.js"></script>
+  </head>
+  
+<body role="document">
+    <include file="Includes/nav"/>
+    <div class="container marketing pagebody">
+      <div class="row">
+        <div class="col-lg-12 main">
+          <div class="row page-header">
+            <div class="col-lg-12">
+              <h1>{$Think.lang.My Tasks}<if condition="$qualification_test == 1">&nbsp;&nbsp;({$Think.lang.Qualification Test})</if></h1><h3><a onclick="history.go(-1)" style="cursor:pointer;">&larr;{$Think.lang.Back to task list}</a></h3>
+            </div>
+          </div>
+				<div id="jobdiv" style="border-bottom: 10px solid;">
+					<form id="jobform" action="{$Think.config.API_URL}/workflow/submit/?token={$_SESSION['worker_token']}" method="post">
+						<input type="hidden" name="worker_id" value="{$_SESSION['worker_id']}">
+						<input type="hidden" name="task_id" value="{$task_id}">
+						<div style="text-align:center;"><button type="submit" class="btn btn-lg btn-primary btn-block" id="submitBtn">{$Think.lang.Submit}</button></div>
+					</form>
+				</div>
+        </div>
+      </div>
+      <include file="Includes/bottom"/>
+    </div>
+
+<script type="text/javascript">
+/**
+ * 
+ */
+$(document).ready(function() {
+	var task_template_type = {$task_template_type};
+	var templates = {};
+	//var template_json = {$_SESSION["template_json"]};
+	var template_json = {code: 0, result: {questionRadio: "<div class=\"question\">\n<div>{{description}}</div>\n    {{#options}}\n        <div><label><input type=\"radio\" name=\"{{name}}\" value=\"{{.}}\"/>{{.}}</label></div>\n    {{/options}}\n</div>\n", questionText: "<div class=\"question\">\n    <div>{{description}}</div>\n    <div><input type=\"text\" name=\"{{name}}\"/></div>\n</div>\n", "unit": "<div class=\"unit\">\n<div>{{description}}</div>\n    {{#questions}}\n        {{#type-radio}}\n            {{> questionRadio}}\n        {{/type-radio}}\n        {{#type-checkbox}}\n            {{> questionCheckBox}}\n        {{/type-checkbox}}\n        {{#type-input}}\n            {{> questionText}}\n        {{/type-input}}\n    {{/questions}}\n</div>\n", questionCheckBox: "<div class=\"question\">\n<div>{{description}}</div>\n    {{#options}}\n        <div><label><input type=\"checkbox\" name=\"{{name}}\" value=\"{{.}}\"/>{{.}}</label></div>\n    {{/options}}\n</div>\n"}};
+
+	if (task_template_type==7)
+	{
+		template_json = {code: 0, result: {questionRadio: "<div class=\"question\">\n<div>{{description}}</div>\n    {{#options}}\n        <div><label><input type=\"radio\" name=\"{{name}}\" value=\"{{.}}\"/>{{.}}</label></div>\n    {{/options}}\n</div>\n", questionText: "<div class=\"question\">\n    <div>{{description}}</div>\n    <div><input type=\"text\" name=\"{{name}}\"/></div>\n</div>\n", "unit": "<div class=\"unit\">\n<div>{{description}}</div>\n    {{#questions}}\n        {{#type-classification}}\n            {{> questionClassification}}\n        {{/type-classification}}\n        {{#type-radio}}\n            {{> questionRadio}}\n        {{/type-radio}}\n        {{#type-checkbox}}\n            {{> questionCheckBox}}\n        {{/type-checkbox}}\n        {{#type-input}}\n            {{> questionText}}\n        {{/type-input}}\n    {{/questions}}\n</div>\n", questionCheckBox: "<div class=\"question\">\n<div>{{description}}</div>\n    {{#options}}\n        <div><label><input type=\"checkbox\" name=\"{{name}}\" value=\"{{.}}\"/>{{.}}</label></div>\n    {{/options}}\n</div>\n", questionClassification: "<div class=\"question classificationque\" name=\"{{name}}\">\n<div class=\"classification\">\n</div>\n<div class=\"classification_result\">\n</div>\n</div>"}};
+	}
+
+	//console.log(template_json);
+	$.each(template_json["result"], function(k, v) {
+		Mustache.parse(v);
+		templates[k] = v;
+	});
+
+	var render_unit = function(template_json) {
+		return Mustache.render(templates.unit, template_json, templates);
+	};
+
+	var render_units = function(json_array) {
+		return $.map(json_array, function(item) {
+			// use the first unit's question description since usually all the units share the same question structure
+			item.questions = item.questions || json_array[0].questions;
+			//console.log(item.questions);
+			return render_unit(item);
+		});
+	};
+	
+	var my_unit_list = {$my_unit_list};
+	//var task_template_type = {$task_template_type};
+
+	//console.log(task_template_type);
+	//console.log(my_unit_list);
+	if(my_unit_list["code"] != 0) {
+		alert(display_lang[my_unit_list["message"]]);
+		//window.location.href="{$Think.config.WEB_URL}/Worker";
+		history.go(-1);
+	}
+	
+	var seconds = my_unit_list["result"]["data"].length*my_unit_list["result"]["data"][0]["questions"].length;
+	countDown(seconds); // 开始计时
+	
+	$("#jobdiv form").prepend($("<input>").attr("type", "hidden").attr("name", "token").attr("value", my_unit_list["result"]["token"]));
+		
+		// change description
+		var len = my_unit_list["result"]["data"].length;
+		for (var i = 0; i < len; i++) {
+			var url = my_unit_list["result"]["data"][i]["description"];
+			my_unit_list["result"]["data"][i]["new_description"] = my_unit_list["result"]["data"][i]["description"];
+			if (task_template_type == 3) { // 去掉description中的url
+				var pic1s = url.indexOf("url@");
+				var pic1e = url.indexOf("@", pic1s+4);
+				
+				var new_desc = url.substring(0, pic1s)+url.substring(pic1e+1, url.length-1);
+				//console.log("new_desc = "+new_desc);
+				my_unit_list["result"]["data"][i]["description"] = new_desc;
+			} else if (task_template_type == 4) { // 去掉description中的url
+				var pic1s = url.indexOf("url@");
+				var pic1e = url.indexOf("@", pic1s+4);
+
+				var pic2s = url.indexOf("url@", pic1e + 1);
+				var pic2e = url.indexOf("@", pic2s+4);
+				
+				var new_desc = url.substring(0, pic1s)+url.substring(pic1e+1, pic2s) + url.substring(pic2e+1, url.length-1);
+				//console.log("new_desc = "+new_desc);
+				my_unit_list["result"]["data"][i]["description"] = new_desc;
+			} else if (task_template_type == 5) { // 去掉description中的url和HTML内容
+				var pic1s = url.indexOf("web@crowdbao");
+				var pic1e = url.indexOf("crowdbao@", pic1s+12);
+				
+				var new_desc = url.substring(0, pic1s)+url.substring(pic1e+9, url.length-1);
+				//console.log("new_desc = "+new_desc);
+				my_unit_list["result"]["data"][i]["description"] = new_desc;
+			} else if (task_template_type == 6) { // 去掉description中的url和HTML内容
+				var pic1s = url.indexOf("web@crowdbao");
+				var pic1e = url.indexOf("crowdbao@", pic1s+12);
+
+				var pic2s = url.indexOf("web@crowdbao", pic1e + 9);
+				var pic2e = url.indexOf("crowdbao@", pic2s+12);
+				
+				var new_desc = url.substring(0, pic1s)+url.substring(pic1e+9, pic2s) + url.substring(pic2e+9, url.length-1);
+				//console.log("new_desc = "+new_desc);
+				my_unit_list["result"]["data"][i]["description"] = new_desc;
+			}
+		}
+	
+	$("#jobdiv form").prepend(render_units(my_unit_list["result"]["data"]));
+	$(".unit div:first-child").each(function(){
+							$(this)[0].innerHTML = $(this).text();
+							$(this)[0].innerHTML = $(this)[0].innerText;
+						});
+		var len = my_unit_list["result"]["data"].length;
+		var api = api_url+"/photoes/?photo_url=";
+		for (var i = 0; i < len; i++) {
+			var url = my_unit_list["result"]["data"][i]["new_description"]; // use new_description
+			var urlt = "";
+			if (task_template_type == 3) { // 单个图片
+				var pic1s = url.indexOf("@");
+				pic1s = pic1s + 1;
+				var pic1e = url.indexOf("@", pic1s);
+				urlt = url.substring(pic1s, pic1e);
+
+				var start = urlt.substring(0, 5);
+				var path = "";
+				if (start == "tasks") { // 服务器上图片
+					//alert(urlt);
+					path = api + urlt + "&width=200&token=" + $("#worker_token").val();
+					$("#jobdiv form").children().eq(i).prepend("<img src=/>");
+				$("#jobdiv form").children().eq(i).children(":first").attr('src', path);
+				} else { // 外链图片
+					path = urlt;
+					showImg(path,$("#jobdiv form").children().eq(i));
+				}
+			} else if (task_template_type == 4) { // 两个图片
+				var pic1s = url.indexOf("@");
+				pic1s = pic1s + 1;
+				var pic1e = url.indexOf("@", pic1s);
+
+				var pic2s = url.indexOf("@", pic1e + 1);
+				pic2s = pic2s + 1;
+				var pic2e = url.indexOf("@", pic2s);
+				urlt = url.substring(pic2s, pic2e);
+				//alert(urlt);
+				var start = urlt.substring(0, 5);
+				var path = "";
+				if (start == "tasks") { // 服务器上图片
+					//alert(urlt);
+					path = api + urlt + "&width=200&token=" + $("#worker_token").val();
+					$("#jobdiv form").children().eq(i).prepend("<img src=/>");
+					$("#jobdiv form").children().eq(i).children(":first").attr('src', path);
+				} else { // 外链图片
+					path = urlt;
+					showImg2(path,$("#jobdiv form").children().eq(i));
+				}
+
+				urlt = url.substring(pic1s, pic1e);
+				//alert(urlt);
+				var start = urlt.substring(0, 5);
+				var path = "";
+				if (start == "tasks") { // 服务器上图片
+					//alert(urlt);
+					path = api + urlt + "&width=200&token=" + $("#worker_token").val();
+					$("#jobdiv form").children().eq(i).prepend("<img src=/>");
+					$("#jobdiv form").children().eq(i).children(":first").attr('src', path);
+				} else { // 外链图片
+					path = urlt;
+					showImg2(path,$("#jobdiv form").children().eq(i));
+				}
+				
+			} else if (task_template_type == 5) { //  TODO 单个网页
+				var pic1s = url.indexOf("@crowdbao");
+				pic1s = pic1s + 9;
+				var pic1e = url.indexOf("crowdbao@", pic1s);
+				urlt = url.substring(pic1s, pic1e);
+
+				var start = urlt.substring(0, 3);
+				var path = "";
+				if (start == "url") { // 外联网址
+					path = urlt.substring(3, urlt.length);
+					console.log(path);
+					showURL(path,$("#jobdiv form").children().eq(i));
+				} 
+				else { // 服务器上网页内容
+					//alert(urlt);
+					//path = api + urlt + "&width=200&token=" + $("#worker_token").val();
+					//$("#jobdiv form").children().eq(i).prepend("<img src=/>");
+					//$("#jobdiv form").children().eq(i).children(":first").attr('src', path);
+					path = urlt;
+					showHTML(path,$("#jobdiv form").children().eq(i));
+				}
+			} else if (task_template_type == 6) { //  TODO 两个网页
+				/*var pic1s = url.indexOf("@crowdbao");
+				pic1s = pic1s + 9;
+				var pic1e = url.indexOf("crowdbao@", pic1s);
+
+				var pic2s = url.indexOf("@crowdbao", pic1e + 1);
+				pic2s = pic2s + 9;
+				var pic2e = url.indexOf("crowdbao@", pic2s);
+				urlt = url.substring(pic2s, pic2e);
+				console.log("11111");
+				var start = urlt.substring(0, 3);
+				var path = "";
+				if (start == "url") { // 外联网址
+					path = urlt.substring(3, urlt.length);
+					showURL2(path,$("#jobdiv form").children().eq(i));
+				} 
+				else { // 服务器上网页内容
+					//alert(urlt);
+					//path = api + urlt + "&width=200&token=" + $("#worker_token").val();
+					//$("#jobdiv form").children().eq(i).prepend("<img src=/>");
+					//$("#jobdiv form").children().eq(i).children(":first").attr('src', path);
+					path = urlt;
+					showHTML2(path,$("#jobdiv form").children().eq(i));
+				}
+
+				urlt = url.substring(pic1s, pic1e);
+				console.log("22222");
+				var start = urlt.substring(0, 3);
+				var path = "";
+				if (start == "url") { // 外联网址
+					path = urlt.substring(3, urlt.length);
+					showURL2(path,$("#jobdiv form").children().eq(i));
+				} 
+				else { // 服务器上网页内容
+					//alert(urlt);
+					//path = api + urlt + "&width=200&token=" + $("#worker_token").val();
+					//$("#jobdiv form").children().eq(i).prepend("<img src=/>");
+					//$("#jobdiv form").children().eq(i).children(":first").attr('src', path);
+					path = urlt;
+					showHTML2(path,$("#jobdiv form").children().eq(i));
+				}*/
+				
+				var start_url = 0;
+									var pic_s = 0;
+									var pic_e = 0;
+									var urls = new Array();
+									while (url.indexOf("@", start_url)>=0)
+									{
+										pic_s = url.indexOf("web@crowdbao", start_url);
+										pic_s = pic_s + 12;
+										pic_e = url.indexOf("crowdbao@", pic_s);
+										urls.push(url.substring(pic_s, pic_e));
+										start_url = pic_e + 9;
+									}
+									
+									var len_urls = urls.length;
+									for (var j = len_urls-1; j >= 0; j--)
+									{
+										var urlt = urls[j];
+										
+										var start = urlt.substring(0, 3);
+										var path = "";
+										if (start == "url") { // 外联网址
+											path = urlt.substring(3, urlt.length);
+											console.log(path);
+											showURL2(path,$("#jobdiv form").children().eq(i));
+										} 
+										else { // 服务器上网页内容
+											$("#jobdiv form").children().eq(i).prepend("<iframe class=\"col-md-6\" frameborder=\"1\" scrolling=\"auto\" width=\"100%\" style=\"border:solid 1px;\" src=></iframe>");
+											$("#jobdiv form").children().eq(i).children(":first")[0].contentWindow.document.writeln("<style type=\"text/css\">body{zoom:80%}</style>"+urlt);
+										}
+									}
+				
+			}
+			else if (task_template_type == 7)
+			{
+				$("#jobdiv form").children().eq(i).children().eq(1).children().eq(0).jstree({
+    									'core' : {
+											'data' : {
+												"url" : "__PUBLIC__/assets/json/rootw.json",
+												"dataType" : "json"
+											}
+											/*[{ "text" : "Root", "state" : {"opened" : true }, "icon" : "__PUBLIC__/assets/img/tree_icon.png", "children" : [{ "text" : "Fruit","icon" : "__PUBLIC__/assets/img/tree_icon.png" }]
+        										}]*/
+    									}
+  									});
+				$("#jobdiv form").children().eq(i).children().eq(1).children().eq(1).text("{$Think.lang.chooseclass}");
+				$("#jobdiv form").children().eq(i).children().eq(1).children().eq(0).on("click.jstree", function (e, data) {
+										var instance = $(this).jstree(true);
+										instance.toggle_node(e.target);
+									});
+				$("#jobdiv form").children().eq(i).children().eq(1).children().eq(0).on("dblclick.jstree", function (e, data) {
+    									var instance = $(this).jstree(true);
+    									var text = $(this).next().text();
+    									//console.log(text);
+    									var nodetexts = text.split(":")[1].split(";");
+    									//console.log(nodetexts);
+    									var nodetext = instance.get_path(e.target, "/");
+    									var len = nodetexts.length;
+    									var flag = 0;
+    									for (var i = 0; i < len; i++)
+    									{
+    										if(nodetext==nodetexts[i])
+    										{
+    											flag = 1;
+    											return;
+    										}
+    									}
+    									if (flag==0){
+    										var div = document.createElement("a");
+    										div.className = "classificationnode";
+    										$(div).text(nodetext+";");
+    										var span = document.createElement("span");
+											span.className = "glyphicon glyphicon-remove";
+											div.appendChild(span);
+											$(span).click(function(){
+												var Node = $(this).parent();
+												$(Node).remove();
+												//$(this).parent().remove();
+											});
+											$(this).next().append($(div));
+											//$(this).next().append(";");
+    									}
+									});
+			}
+		}
+
+	/*$("#submitBtn").click(function(){
+		var queryString = $('#jobform').formSerialize();
+		$.post(
+				web_url+'/Worker/submitanswer',
+				{
+				 	data: queryString
+				},
+				function(data, status) {
+					if(status=="success") {
+						if(data.code == 0) {
+							alert("submit success!");
+							window.location.href=web_url+'/Worker/DoJob/task_id/{$task_id}';
+						}
+						else {
+							alert(data.message);
+						}
+					}
+					else {
+						alert("submit fail!");
+					}
+				}
+			);
+	});*/
+	
+	var options = {  
+	        beforeSubmit:  showRequest,  //提交前处理 
+	        success:       showResponse,  //处理完成 
+	        resetForm: true,  
+	        dataType:  'json'  
+	    };  
+	  
+	    $('#jobform').submit(function() { 
+
+
+	    	var len = $(".classification_result").length;
+	    	//console.log(len);
+			var arr = new Array();
+			for (var i = 0;i < len; i++)
+			{
+				var aa = $(".classification_result").eq(i).text();
+				aa = aa.split(":")[1];
+				
+	    		var ans = $(".question.classificationque").eq(i).attr("name")+"="+aa;
+	    		arr.push(ans);
+	    		AddElement("hidden", $(".question.classificationque").eq(i).attr("name"), aa); // 动态添加到form里
+			}
+	    	console.log(arr); 
+	    	
+	    	var queryString = $('#jobform').formSerialize();
+	    	console.log(queryString);
+	    	var queryArray = queryString.split("&");
+	    	//console.log(queryArray);
+	    	queryArray = arr.concat(queryArray);
+	    	//console.log(queryArray);
+	    	var answered_questions_num = 0;
+	    	var pre_id = queryArray[0].split("=")[0];
+	    	var first_not_answered_question = "";
+	    	if(queryArray[0].split("=")[1] != "") { // 针对填空题
+	    		answered_questions_num = answered_questions_num+1;
+	    	}
+	    	else {
+	    		first_not_answered_question = "#"+queryArray[0].split("=")[0];
+	    	}
+	    	for(var i=1;i<queryArray.length;i++) {
+	    		//console.log(answered_questions_num+pre_id);
+	    		if(queryArray[i].split("=")[0] != pre_id && queryArray[i].split("=")[1] != "") { // 前者针对多选题，后者针对填空题
+	    			answered_questions_num = answered_questions_num+1;
+	    			pre_id = queryArray[i].split("=")[0];
+	    		}
+	    		else {
+	    			if(first_not_answered_question == "") {
+	    				first_not_answered_question = "#"+queryArray[i].split("=")[0];
+	    			}
+	    		}
+	    	}
+
+	    	// 判断是否回答了所有问题
+	    	var all_questions_num = my_unit_list["result"]["data"][0]["questions"].length*my_unit_list["result"]["data"].length;
+	    	//console.log(answered_questions_num);
+	    	if(answered_questions_num < 3+all_questions_num) {
+	    		alert(display_lang["please answer all questions!"]);
+	    		console.log(first_not_answered_question);
+	    		// TODO 加入页面内跳转代码（试了很多方法都无效，并且这里得到的first_not_answered_question并不一定是第一个没被回答的问题）
+	    		
+	    	}
+	    	else {
+	    		//console.log($('#jobform').formSerialize());
+	    		/*
+				var len = $(".unit").length;
+				var arr = new Array();
+				for (var i = 0;i < len; i++)
+				{
+					var instance = $(".unit").eq(i).children().eq(0).jstree(true);
+					var node = instance.get_selected(true)[0];
+	    			var aa = instance.get_path(node, '/');
+	    			arr.push(aa);
+				}
+	    		console.log(arr);*/
+	        	$(this).ajaxSubmit(options); 
+	    	}
+	        return false;
+	    });
+});
+
+function showImg( url , ele) { // iframe内嵌图片
+	//console.log(url+ele);
+	var frameid = 'frameimg' + Math.random(); 
+	window.img = '<div style="text-align:center;"><img id="img" width="200px" height="200px" src=\''+url+'?'+Math.random()+'\' /><script>window.onload = function() { parent.document.getElementById(\''+frameid+'\').height = document.getElementById(\'img\').height+\'px\'; }<'+'/script></div>'; 
+	ele.prepend('<iframe class="col-md-12" id="'+frameid+'" src="javascript:parent.img;" frameBorder="0" scrolling="no" width="100%" style="height:200px;"></iframe>'); 
+} 
+
+function showImg2( url , ele) { // iframe内嵌图片
+	//console.log(url+ele);
+	var frameid = 'frameimg' + Math.random(); 
+	window.img = '<div style="text-align:center;"><img id="img" width="200px" height="200px" src=\''+url+'?'+Math.random()+'\' /><script>window.onload = function() { parent.document.getElementById(\''+frameid+'\').height = document.getElementById(\'img\').height+\'px\'; }<'+'/script></div>'; 
+	ele.prepend('<iframe class="col-md-6" id="'+frameid+'" src="javascript:parent.img;" frameBorder="0" scrolling="no" width="100%" style="height:200px;"></iframe>'); 
+} 
+
+function showHTML( url , ele) { // TODO iframe内嵌html
+	//console.log(url+ele);
+	var frameid = 'frame' + Math.random(); 
+	ele.prepend('<div class="row"><iframe class="col-md-12" id="'+frameid+'" frameborder="1" scrolling="auto" width="100%" style="border:solid 1px;"></iframe></div>'); 
+	$(document.getElementById(frameid).contentWindow.document.body).html(url);
+	//console.log($(document.getElementById(frameid).contentWindow.document.body).html());
+} 
+
+function showHTML2( url , ele) { // TODO iframe内嵌html
+	//console.log(url+ele);
+	var frameid = 'frame' + Math.random(); 
+	ele.prepend('<div class="col-md-6"><iframe id="'+frameid+'" frameborder="1" scrolling="auto" width="100%" style="border:solid 1px;"></iframe></div>'); 
+	$(document.getElementById(frameid).contentWindow.document.body).html(url);
+	//console.log($(document.getElementById(frameid).contentWindow.document.body).html());
+} 
+
+function showURL( url , ele) { // TODO iframe内嵌网址内容
+	//console.log(url+ele);
+	var frameid = 'frame' + Math.random(); 
+	ele.prepend('<div class="row"><iframe class="col-md-12" id="'+frameid+'" src="'+url+'" frameborder="1" scrolling="auto" width="100%" style="border:solid 1px;"></iframe></div>'); 
+} 
+
+function showURL2( url , ele) { // TODO iframe内嵌网址内容
+	//console.log(url+ele);
+	var frameid = 'frame' + Math.random(); 
+	ele.prepend('<div class="col-md-6"><iframe id="'+frameid+'" src="'+url+'" frameborder="1" scrolling="auto" width="100%" style="border:solid 1px;"></iframe></div>'); 
+} 
+
+function AddElement(mytype, myid, myvalue){  
+        var TemO=document.getElementById("jobform");  
+        var newInput = document.createElement("input");   
+          
+        newInput.type=mytype;   
+        newInput.name=myid; 
+        newInput.value=myvalue;
+          
+        TemO.appendChild(newInput);
+}
+
+function showRequest(formData, jqForm, options) {  
+    return true;  
+}  
+  
+function showResponse(responseText, statusText)  {
+    if(responseText.code == 0) {
+    	alert(display_lang["submit success!"]);
+    	//alert("do next units?");
+		window.location.href=web_url+'/Worker/DoJob/task_id/{$task_id}';
+		//window.location.reload();
+    }
+    else {
+    	console.log(responseText);
+    	alert(display_lang["submit fail!"]);
+    }
+}  
+</script>
+
+<script type="text/javascript">
+var initcounts=10;
+var counts=10;
+var counting;
+function countDown(seconds){
+	initcounts = seconds;
+	counts = seconds; // 时间可设置
+	var test = document.getElementById("submitBtn");
+	test.disabled = true;
+	counting = setInterval("countOne();",1000)
+}
+function countOne(){
+	var test = document.getElementById("submitBtn");
+	//test.firstChild.nodeValue = "{$Think.lang.Submit} ({$Think.lang.Remains} "+counts+" {$Think.lang.Seconds})";
+	test.firstChild.nodeValue = initcounts + " {$Think.lang.Seconds}" + "{$Think.lang.Submit Info}" + (initcounts-counts) + "{$Think.lang.Seconds}";
+	if(counts-- == "0"){
+		test.firstChild.nodeValue = "{$Think.lang.Submit}";
+		test.disabled = false;
+		clearInterval(counting);
+	}
+}
+</script>
+<include file="Includes/footer"/>

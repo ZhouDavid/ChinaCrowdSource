@@ -1,0 +1,35 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+  </head>
+  <body class="users">
+  <include file="Includes/nav"/>
+	<div class="container marketing pagebody">
+      <div class="container-fluid">
+    <div id="auth">
+      <div class="well">
+        <div class="heading">
+          <h3>{$Think.lang.Reset password} ({$Think.lang.title2})</h3>
+          <div class="already-have-account">{$Think.lang.Reset password tips} 
+            <a href="{$Think.config.WEB_URL}/Index/signin" class="switch-login">{$Think.lang.Back to sign in}</a>
+          </div>
+        </div>
+        <form accept-charset="UTF-8" action="" class="authentication" id="new-user-form" method="post" novalidate="novalidate">
+          <div id="reset-request-success" class="alert alert-info" type="hidden"><a class="close" data-dismiss="alert">×</a><p>{$Think.lang.reset password request success}</p></div>
+          <div class="control-group email optional user_email">
+            <label class="email optional control-label" for="user-email">{$Think.lang.email}</label>
+            <div class="controls">
+              <input autocomplete="off" class="string email optional" id="user-email" name="user[email]" placeholder="Email" size="50" type="email">
+            </div>
+          </div>
+          <div class="form-actions">
+            <input id="requester-reset-request" class="btn btn-primary" name="commit" value="{$Think.lang.Submit}">
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+    <include file="Includes/bottom"/>
+    </div>
+        <script type="text/javascript" src="__PUBLIC__/assets/js/index.js"></script>
+<include file="Includes/footer"/>
+

@@ -1,0 +1,116 @@
+<include file="Includes/header"/>
+    <link href="__PUBLIC__/assets/css/dashboard.css" rel="stylesheet">
+    <link href="__PUBLIC__/assets/css/style.css" rel="stylesheet">
+  </head>
+  
+<body role="document">
+    <include file="Includes/nav"/>
+    <div class="container marketing pagebody">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 main">
+          <input type="hidden" id="requester_token" value="{$token}" />
+          <div class="row page-header">
+            <div class="col-md-6 col-xs-6">
+              <h1 class="index_title">{$Think.lang.My Tasks}</h1>
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <button id="create_jobs" class="new-button lightblue">{$Think.lang.Create Jobs}</button>
+            </div>
+
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th><a href="{$Think.config.WEB_URL}/Requester/index/ordering/{$current_reverse_sort}id">{$Think.lang.ID}<if condition="$current_ordering_field == 'id' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'id' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th><a href="{$Think.config.WEB_URL}/Requester/index/ordering/{$current_reverse_sort}timestamp">{$Think.lang.Time}<if condition="$current_ordering_field == 'timestamp' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'timestamp' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th><a href="{$Think.config.WEB_URL}/Requester/index/ordering/{$current_reverse_sort}title">{$Think.lang.Title}<if condition="$current_ordering_field == 'title' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'title' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th><a href="{$Think.config.WEB_URL}/Requester/index/ordering/{$current_reverse_sort}description">{$Think.lang.Description}<if condition="$current_ordering_field == 'description' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'description' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th>{$Think.lang.Available units}/<a href="{$Think.config.WEB_URL}/Requester/index/ordering/{$current_reverse_sort}total_units">{$Think.lang.All units}<if condition="$current_ordering_field == 'total_units' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'total_units' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th><a href="{$Think.config.WEB_URL}/Requester/index/ordering/{$current_reverse_sort}published">{$Think.lang.Status}<if condition="$current_ordering_field == 'published' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'published' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th><a href="{$Think.config.WEB_URL}/Requester/index/ordering/{$current_reverse_sort}tags">{$Think.lang.Tags}<if condition="$current_ordering_field == 'tags' && $current_sort == ''">&uarr;<elseif condition="$current_ordering_field == 'tags' && $current_sort == '-'"/>&darr;</if></a></th>
+                  <th>{$Think.lang.Cost}</th>
+                  <th>{$Think.lang.Operation}</th>
+                </tr>
+              </thead>
+              <tbody>
+              	<volist name="my_task_list.results" id="my_task">
+                <tr data-href="{$Think.config.WEB_URL}/Requester/monitor/task_id/{$my_task['id']}">
+                  <td>{$my_task['id']}</td>
+                  <td>{$my_task['timestamp']}</td>
+                  <td>{$my_task['title']}</td>
+                  <td>{$my_task['description']}</td>
+                  <td>{$my_task['total_units']-$my_task['finished_units']}/{$my_task['total_units']}</td>
+                  <td><?php
+                  if ($my_task["ended"])
+                    echo L('Terminated');
+                  else if ($my_task["finished"])
+                    echo L('Finished');
+                  else if ($my_task["published"])
+                    echo L('Published');
+                  else
+                    echo L('Not Published');
+                  ?></td>
+                  <td>
+                    <volist name="my_task.tags" id="tag">
+                      <eq name="Think.lang.lang" value="en-us">
+                        {$tag};
+                      </eq>
+                      <eq name="Think.lang.lang" value="zh-cn">
+                        <?php
+                          $hash=array("Technology"=>"科技","Life"=>"生活","Entertainment"=>"休闲","Sports"=>"运动","Education"=>"教育","Health"=>"健康");
+                          echo $hash[$tag];
+                        ?>;
+                      </eq>
+                    </volist>
+                  </td>
+                  <td>￥{$my_task['price']*$my_task['finished_units']*$my_task['judgements_per_unit']}</td>
+                  <td>
+                    <div class="dropdown" style="display:block;">
+                      <button class="btn btn-default dropdown-toggle dropdownMenu1" type="button" data-toggle="dropdown" aria-expanded="true" style="padding:3px 6px">
+                        <span class="glyphicon glyphicon-cog"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="right:0">
+                        <if condition="$my_task['ended'] == true">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="{$Think.config.WEB_URL}/Requester/get_results/task_id/{$my_task['id']}">{$Think.lang.Get Results}</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:Delete({$my_task['id']})">{$Think.lang.Delete}</a></li>
+                        </if>
+                        <if condition="$my_task['finished'] == true">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="{$Think.config.WEB_URL}/Requester/get_results/task_id/{$my_task['id']}">{$Think.lang.Get Results}</a></li>
+                        </if>
+                        <if condition="$my_task['published'] == true && $my_task['finished'] == false && $my_task['ended'] == false">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:Terminate({$my_task['id']})">{$Think.lang.Terminate}</a></li>
+                        </if>
+                        <if condition="$my_task['published'] == false && $my_task['finished'] == false">
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="{$Think.config.WEB_URL}/Requester/launch/task_id/{$my_task['id']}">{$Think.lang.Publish}</a></li>
+                          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:Delete({$my_task['id']})">{$Think.lang.Delete}</a></li>
+                        </if>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                </volist>
+              </tbody>
+            </table>
+
+            <div><ul class="pagination">
+              <if condition="$my_task_list['previous'] != ''"><li><a href="{$Think.config.WEB_URL}/Requester/index/page/{$current_page-1}/ordering/{$current_ordering}"><</a></li></if>
+              <if condition="$my_task_list['previous'] != ''"><li><a href="{$Think.config.WEB_URL}/Requester/index/page/{$current_page-1}/ordering/{$current_ordering}">{$current_page-1}</a></li></if>
+              <li><a>{$current_page}</a></li>
+              <if condition="$my_task_list['next'] != ''"><li><a href="{$Think.config.WEB_URL}/Requester/index/page/{$current_page+1}/ordering/{$current_ordering}">{$current_page+1}</a></li></if>
+              <if condition="$my_task_list['count']/10 gt $current_page+2"><li><a href="{$Think.config.WEB_URL}/Requester/index/page/{$current_page+2}/ordering/{$current_ordering}">{$current_page+2}</a></li></if>
+              <if condition="$my_task_list['count']/10 gt $current_page+3"><li><a href="{$Think.config.WEB_URL}/Requester/index/page/{$current_page+3}/ordering/{$current_ordering}">{$current_page+3}</a></li></if>
+              <if condition="$my_task_list['next'] != ''"><li><a href="{$Think.config.WEB_URL}/Requester/index/page/{$current_page+1}/ordering/{$current_ordering}">></a></li></if>
+            </ul></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <include file="Includes/bottom"/>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/error.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/js/Requester/index.js"></script>
+
+<include file="Includes/footer"/>
